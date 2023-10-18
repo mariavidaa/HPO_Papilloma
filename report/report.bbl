@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{3}
+\begin{thebibliography}{5}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -86,6 +86,38 @@ El virus del papiloma humano (VPH) y el cáncer - Instituto Nacional del
 \end{botherref}
 \endbibitem
 
+%%% 4
+\bibitem{Siegel2012}
+\begin{botherref}
+\oauthor{\bsnm{Siegel}, \binits{D.H.}},
+\oauthor{\bsnm{Mann}, \binits{J.A.}},
+\oauthor{\bsnm{Krol}, \binits{A.L.}},
+\oauthor{\bsnm{Rauen}, \binits{K.A.}}:
+Dermatological phenotype in costello syndrome: Consequences of ras
+  dysregulation in development.
+British Journal of Dermatology
+\textbf{166}
+(2012).
+doi:\doiurl{10.1111/j.1365-2133.2011.10744.x}
+\end{botherref}
+\endbibitem
+
+%%% 5
+\bibitem{McKenna2021}
+\begin{botherref}
+\oauthor{\bsnm{McKenna}, \binits{M.}},
+\oauthor{\bsnm{Balasuriya}, \binits{N.}},
+\oauthor{\bsnm{Zhong}, \binits{S.}},
+\oauthor{\bsnm{Li}, \binits{S.S.C.}},
+\oauthor{\bsnm{O'Donoghue}, \binits{P.}}:
+Phospho-form specific substrates of protein kinase b (akt1).
+Frontiers in Bioengineering and Biotechnology
+\textbf{8}
+(2021).
+doi:\doiurl{10.3389/fbioe.2020.619252}
+\end{botherref}
+\endbibitem
+
 \end{thebibliography}
 
 \newcommand{\BMCxmlcomment}[1]{}
@@ -136,6 +168,35 @@ El virus del papiloma humano (VPH) y el cáncer - Instituto Nacional del
   </aug>
   <source>2016</source>
   <pubdate>2021</pubdate>
+</bibl>
+
+<bibl id="B4">
+  <title><p>Dermatological phenotype in Costello syndrome: Consequences of Ras
+  dysregulation in development</p></title>
+  <aug>
+    <au><snm>Siegel</snm><fnm>D. H.</fnm></au>
+    <au><snm>Mann</snm><fnm>J. A.</fnm></au>
+    <au><snm>Krol</snm><fnm>A. L.</fnm></au>
+    <au><snm>Rauen</snm><fnm>K. A.</fnm></au>
+  </aug>
+  <source>British Journal of Dermatology</source>
+  <pubdate>2012</pubdate>
+  <volume>166</volume>
+</bibl>
+
+<bibl id="B5">
+  <title><p>Phospho-Form Specific Substrates of Protein Kinase B
+  (AKT1)</p></title>
+  <aug>
+    <au><snm>McKenna</snm><fnm>M</fnm></au>
+    <au><snm>Balasuriya</snm><fnm>N</fnm></au>
+    <au><snm>Zhong</snm><fnm>S</fnm></au>
+    <au><snm>Li</snm><fnm>SSC</fnm></au>
+    <au><snm>O'Donoghue</snm><fnm>P</fnm></au>
+  </aug>
+  <source>Frontiers in Bioengineering and Biotechnology</source>
+  <pubdate>2021</pubdate>
+  <volume>8</volume>
 </bibl>
 
 </refgrp>

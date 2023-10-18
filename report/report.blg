@@ -28,51 +28,50 @@ Warning--I didn't find a database entry for "marg"
 Warning--I didn't find a database entry for "schn"
 Warning--I didn't find a database entry for "koha"
 Warning--I didn't find a database entry for "issnic"
-Warning--I didn't find a database entry for "misc"
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
-You've used 3 entries,
+You've used 5 entries,
             7128 wiz_defined-function locations,
-            1156 strings with 9853 characters,
-and the built_in function-call counts, 14367 in all, are:
-= -- 1744
-> -- 90
-< -- 55
-+ -- 357
-- -- 25
-* -- 1103
-:= -- 2904
-add.period$ -- 6
-call.type$ -- 3
-change.case$ -- 25
-chr.to.int$ -- 117
-cite$ -- 3
-duplicate$ -- 274
-empty$ -- 822
-format.name$ -- 84
-if$ -- 3171
+            1170 strings with 10350 characters,
+and the built_in function-call counts, 25034 in all, are:
+= -- 3060
+> -- 140
+< -- 70
++ -- 585
+- -- 49
+* -- 1979
+:= -- 5117
+add.period$ -- 10
+call.type$ -- 5
+change.case$ -- 44
+chr.to.int$ -- 125
+cite$ -- 5
+duplicate$ -- 458
+empty$ -- 1507
+format.name$ -- 171
+if$ -- 5445
 int.to.chr$ -- 1
-int.to.str$ -- 8
-missing$ -- 102
-newline$ -- 138
-num.names$ -- 15
-pop$ -- 116
+int.to.str$ -- 12
+missing$ -- 176
+newline$ -- 196
+num.names$ -- 25
+pop$ -- 216
 preamble$ -- 1
-purify$ -- 13
-quote$ -- 6
-skip$ -- 811
+purify$ -- 21
+quote$ -- 10
+skip$ -- 1379
 stack$ -- 0
-substring$ -- 1862
-swap$ -- 91
-text.length$ -- 45
+substring$ -- 3452
+swap$ -- 123
+text.length$ -- 73
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 119
+type$ -- 171
 warning$ -- 0
-while$ -- 97
+while$ -- 162
 width$ -- 0
-write$ -- 159
-(There were 8 warnings)
+write$ -- 246
+(There were 7 warnings)
