@@ -1,0 +1,78 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: report.aux
+Reallocating 'name_of_file' (item size: 1) to 13 items.
+The style file: bmc-mathphys.bst
+Reallocating 'name_of_file' (item size: 1) to 13 items.
+Reallocating 'glb_str_end' (item size: 4) to 20 items.
+Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
+Reallocating 'global_strs' (item size: 1) to 4000000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: bibliography.bib
+Warning--I didn't find a database entry for "Mahdi2015"
+Warning--I didn't find a database entry for "koon"
+Warning--I didn't find a database entry for "xjon"
+Warning--I didn't find a database entry for "marg"
+Warning--I didn't find a database entry for "schn"
+Warning--I didn't find a database entry for "koha"
+Warning--I didn't find a database entry for "issnic"
+Warning--I didn't find a database entry for "misc"
+Reallocating 'wiz_functions' (item size: 4) to 9000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+You've used 3 entries,
+            7128 wiz_defined-function locations,
+            1156 strings with 9853 characters,
+and the built_in function-call counts, 14367 in all, are:
+= -- 1744
+> -- 90
+< -- 55
++ -- 357
+- -- 25
+* -- 1103
+:= -- 2904
+add.period$ -- 6
+call.type$ -- 3
+change.case$ -- 25
+chr.to.int$ -- 117
+cite$ -- 3
+duplicate$ -- 274
+empty$ -- 822
+format.name$ -- 84
+if$ -- 3171
+int.to.chr$ -- 1
+int.to.str$ -- 8
+missing$ -- 102
+newline$ -- 138
+num.names$ -- 15
+pop$ -- 116
+preamble$ -- 1
+purify$ -- 13
+quote$ -- 6
+skip$ -- 811
+stack$ -- 0
+substring$ -- 1862
+swap$ -- 91
+text.length$ -- 45
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 119
+warning$ -- 0
+while$ -- 97
+width$ -- 0
+write$ -- 159
+(There were 8 warnings)

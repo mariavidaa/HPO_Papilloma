@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.10.10)  10 OCT 2023 10:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.10.10)  18 OCT 2023 11:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -262,56 +262,22 @@ LaTeX Font Warning: Font shape `OT1/cmss/bx/n' in size <13> not available
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <24> not available
 (Font)              size <24.88> substituted on input line 36.
 
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 46.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 63.
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 46.
+(Font)              size <5> substituted on input line 63.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
-(Font)              size <5> substituted on input line 46.
+(Font)              size <5> substituted on input line 63.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
-(Font)              size <5> substituted on input line 46.
-
-
-LaTeX Warning: Reference `aff1thanks' on page 1 undefined on input line 46.
-
-
-LaTeX Warning: Reference `aff1thanks' on page 1 undefined on input line 50.
-
-
-LaTeX Warning: Reference `aff1thanks' on page 1 undefined on input line 54.
-
-
-LaTeX Warning: Reference `aff1thanks' on page 1 undefined on input line 58.
-
-
-LaTeX Warning: Reference `aff1thanks' on page 1 undefined on input line 63.
-
-
-LaTeX Warning: Reference `bmc@corref@authorthanks' on page 1 undefined on input
- line 63.
+(Font)              size <5> substituted on input line 63.
 
 \address@aff1=\toks35
 
-LaTeX Warning: Reference `bmc@corref@authorthanks' on page 1 undefined on input
- line 76.
-
-
-LaTeX Warning: Reference `au5@email' on page 1 undefined on input line 76.
-
-
-LaTeX Warning: Reference `fig:cost_genome' on page 1 undefined on input line 10
-9.
-
-
-LaTeX Warning: Reference `fig:cost_megabase' on page 1 undefined on input line 
-109.
-
-
-LaTeX Warning: Reference `tab:ejemplo' on page 1 undefined on input line 109.
+LaTeX Warning: Citation `Mahdi2015' on page 1 undefined on input line 112.
 
 
 LaTeX Warning: Citation `koon' on page 1 undefined on input line 146.
@@ -331,23 +297,75 @@ LaTeX Warning: Citation `koha' on page 1 undefined on input line 146.
 
 LaTeX Warning: Citation `issnic' on page 1 undefined on input line 146.
 
-! I can't write on file `report.pdf'.
-(Press Enter to retry, or Control-C to exit; default file extension is `.pdf')
-Please type another file name for output
-! Emergency stop.
-<argument> \pdfximage 
-                      \ifnum 0\ifx \Gin@decode \@empty \else 1\fi \ifGin@int...
-l.157 ...s/Sequencing_Cost_per_Genome_May2020.jpg}
-                                                  
-*** (job aborted, file error in nonstop mode)
+<figures/Sequencing_Cost_per_Genome_May2020.jpg, id=1, 963.6pt x 542.32613pt>
+File: figures/Sequencing_Cost_per_Genome_May2020.jpg Graphic file (type jpg)
+<use figures/Sequencing_Cost_per_Genome_May2020.jpg>
+Package pdftex.def Info: figures/Sequencing_Cost_per_Genome_May2020.jpg  used o
+n input line 157.
+(pdftex.def)             Requested size: 324.8978pt x 182.84924pt.
 
- 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/Sequencing_Cost_per_Megabase_May2020.jpg, id=2, 963.6pt x 542.32613pt>
+
+File: figures/Sequencing_Cost_per_Megabase_May2020.jpg Graphic file (type jpg)
+<use figures/Sequencing_Cost_per_Megabase_May2020.jpg>
+Package pdftex.def Info: figures/Sequencing_Cost_per_Megabase_May2020.jpg  used
+ on input line 163.
+(pdftex.def)             Requested size: 324.8978pt x 182.84924pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <8> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 200.
+
+[1{C:/Users/mjhr0/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
+
+]
+(tex_files/introduction.tex) (tex_files/material_methods.tex [2 <./figures/Sequ
+encing_Cost_per_Genome_May2020.jpg> <./figures/Sequencing_Cost_per_Megabase_May
+2020.jpg>]) (tex_files/resultados.tex) (tex_files/discusion.tex)
+(tex_files/conclusiones.tex) (report.bbl) [3]
+
+enddocument/afterlastpage: lastpage setting LastPage.
+(report.aux)
+ ***********
+LaTeX2e <2023-06-01> patch level 1
+L3 programming layer <2023-08-29>
+ ***********
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.0pt have occurred.
+
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3843 strings out of 475248
- 58922 string characters out of 5767627
- 1922785 words of memory out of 5000000
- 25328 multiletter control sequences out of 15000+600000
- 564976 words of font info for 60 fonts, out of 8000000 for 9000
+ 3977 strings out of 475248
+ 62213 string characters out of 5767627
+ 1930785 words of memory out of 5000000
+ 25435 multiletter control sequences out of 15000+600000
+ 566694 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,13n,79p,262b,362s stack positions out of 10000i,1000n,20000p,200000b,200000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 85i,13n,79p,798b,324s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Progra
+m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5
+.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Progr
+am Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Program Files/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmss17.pfb><C:/Program Files/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmssi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
+C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Fi
+les/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on report.pdf (3 pages, 1151023 bytes).
+PDF statistics:
+ 89 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+
