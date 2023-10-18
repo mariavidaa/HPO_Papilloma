@@ -1,0 +1,283 @@
+%% BioMed_Central_Bib_Style_v1.01
+
+\begin{thebibliography}{7}
+% BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
+\ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
+\ifx \binits  \undefined \def \binits#1{#1}\fi
+\ifx \bauthor  \undefined \def \bauthor#1{#1}\fi
+\ifx \batitle  \undefined \def \batitle#1{#1}\fi
+\ifx \bjtitle  \undefined \def \bjtitle#1{#1}\fi
+\ifx \bvolume  \undefined \def \bvolume#1{\textbf{#1}}\fi
+\ifx \byear  \undefined \def \byear#1{#1}\fi
+\ifx \bissue  \undefined \def \bissue#1{#1}\fi
+\ifx \bfpage  \undefined \def \bfpage#1{#1}\fi
+\ifx \blpage  \undefined \def \blpage #1{#1}\fi
+\ifx \burl  \undefined \def \burl#1{\textsf{#1}}\fi
+\ifx \doiurl  \undefined \def \doiurl#1{\textsf{#1}}\fi
+\ifx \betal  \undefined \def \betal{\textit{et al.}}\fi
+\ifx \binstitute  \undefined \def \binstitute#1{#1}\fi
+\ifx \binstitutionaled  \undefined \def \binstitutionaled#1{#1}\fi
+\ifx \bctitle  \undefined \def \bctitle#1{#1}\fi
+\ifx \beditor  \undefined \def \beditor#1{#1}\fi
+\ifx \bpublisher  \undefined \def \bpublisher#1{#1}\fi
+\ifx \bbtitle  \undefined \def \bbtitle#1{#1}\fi
+\ifx \bedition  \undefined \def \bedition#1{#1}\fi
+\ifx \bseriesno  \undefined \def \bseriesno#1{#1}\fi
+\ifx \blocation  \undefined \def \blocation#1{#1}\fi
+\ifx \bsertitle  \undefined \def \bsertitle#1{#1}\fi
+\ifx \bsnm \undefined \def \bsnm#1{#1}\fi
+\ifx \bsuffix \undefined \def \bsuffix#1{#1}\fi
+\ifx \bparticle \undefined \def \bparticle#1{#1}\fi
+\ifx \barticle \undefined \def \barticle#1{#1}\fi
+\ifx \bconfdate \undefined \def \bconfdate #1{#1}\fi
+\ifx \botherref \undefined \def \botherref #1{#1}\fi
+\ifx \url \undefined \def \url#1{\textsf{#1}}\fi
+\ifx \bchapter \undefined \def \bchapter#1{#1}\fi
+\ifx \bbook \undefined \def \bbook#1{#1}\fi
+\ifx \bcomment \undefined \def \bcomment#1{#1}\fi
+\ifx \oauthor \undefined \def \oauthor#1{#1}\fi
+\ifx \citeauthoryear \undefined \def \citeauthoryear#1{#1}\fi
+\ifx \endbibitem  \undefined \def \endbibitem {}\fi
+\ifx \bconflocation  \undefined \def \bconflocation#1{#1}\fi
+\ifx \arxivurl  \undefined \def \arxivurl#1{\textsf{#1}}\fi
+\csname PreBibitemsHook\endcsname
+
+%%% 1
+\bibitem{Mahdi2015}
+\begin{botherref}
+\oauthor{\bsnm{Mahdi}, \binits{H.}},
+\oauthor{\bsnm{Mester}, \binits{J.L.}},
+\oauthor{\bsnm{Nizialek}, \binits{E.A.}},
+\oauthor{\bsnm{Ngeow}, \binits{J.}},
+\oauthor{\bsnm{Michener}, \binits{C.}},
+\oauthor{\bsnm{Eng}, \binits{C.}}:
+Germline pten, sdhb-d, and klln alterations in endometrial cancer patients with
+  cowden and cowden-like syndromes: An international, multicenter, prospective
+  study.
+Cancer
+\textbf{121}
+(2015).
+doi:\doiurl{10.1002/cncr.29106}
+\end{botherref}
+\endbibitem
+
+%%% 2
+\bibitem{Kozomara2007}
+\begin{barticle}
+\bauthor{\bsnm{Kozomara}, \binits{R.J.}},
+\bauthor{\bsnm{Brankovic-Magic}, \binits{M.V.}},
+\bauthor{\bsnm{Jovic}, \binits{N.R.}},
+\bauthor{\bsnm{Stosic}, \binits{S.M.}},
+\bauthor{\bsnm{Magic}, \binits{Z.M.}}:
+\batitle{Prognostic significance of tp53 mutations in oral squamous cell
+  carcinoma with human papilloma virus infection}.
+\bjtitle{The International Journal of Biological Markers}
+\bvolume{22},
+\bfpage{252}--\blpage{257}
+(\byear{2007}).
+doi:\doiurl{10.1177/172460080702200403}.
+\bcomment{PMID: 18161655}
+\end{barticle}
+\endbibitem
+
+%%% 3
+\bibitem{Ljubojevic2014}
+\begin{barticle}
+\bauthor{\bsnm{Ljubojevic}, \binits{S.}},
+\bauthor{\bsnm{Skerlev}, \binits{M.}}:
+\batitle{Hpv-associated diseases}.
+\bjtitle{Clinics in Dermatology}
+\bvolume{32},
+\bfpage{227}--\blpage{234}
+(\byear{2014}).
+doi:\doiurl{10.1016/j.clindermatol.2013.08.007}.
+\bcomment{Update on Sexually Transmitted Infections}
+\end{barticle}
+\endbibitem
+
+%%% 4
+\bibitem{papiloma}
+\begin{botherref}
+\oauthor{\bparticle{del} \bsnm{Cáncer}, \binits{I.N.}}:
+El virus del papiloma humano (VPH) y el cáncer - Instituto Nacional del
+  Cáncer
+(2021)
+\end{botherref}
+\endbibitem
+
+%%% 5
+\bibitem{Siegel2012}
+\begin{botherref}
+\oauthor{\bsnm{Siegel}, \binits{D.H.}},
+\oauthor{\bsnm{Mann}, \binits{J.A.}},
+\oauthor{\bsnm{Krol}, \binits{A.L.}},
+\oauthor{\bsnm{Rauen}, \binits{K.A.}}:
+Dermatological phenotype in costello syndrome: Consequences of ras
+  dysregulation in development.
+British Journal of Dermatology
+\textbf{166}
+(2012).
+doi:\doiurl{10.1111/j.1365-2133.2011.10744.x}
+\end{botherref}
+\endbibitem
+
+%%% 6
+\bibitem{McKenna2021}
+\begin{botherref}
+\oauthor{\bsnm{McKenna}, \binits{M.}},
+\oauthor{\bsnm{Balasuriya}, \binits{N.}},
+\oauthor{\bsnm{Zhong}, \binits{S.}},
+\oauthor{\bsnm{Li}, \binits{S.S.C.}},
+\oauthor{\bsnm{O'Donoghue}, \binits{P.}}:
+Phospho-form specific substrates of protein kinase b (akt1).
+Frontiers in Bioengineering and Biotechnology
+\textbf{8}
+(2021).
+doi:\doiurl{10.3389/fbioe.2020.619252}
+\end{botherref}
+\endbibitem
+
+%%% 7
+\bibitem{Hensen2004}
+\begin{barticle}
+\bauthor{\bsnm{Hensen}, \binits{E.F.}},
+\bauthor{\bsnm{Jordanova}, \binits{E.S.}},
+\bauthor{\bparticle{van} \bsnm{Minderhout}, \binits{I.J.H.M.}},
+\bauthor{\bsnm{Hogendoorn}, \binits{P.C.W.}},
+\bauthor{\bsnm{Taschner}, \binits{P.E.M.}},
+\bauthor{\bparticle{van~der} \bsnm{Mey}, \binits{A.G.L.}},
+\bauthor{\bsnm{Devilee}, \binits{P.}},
+\bauthor{\bsnm{Cornelisse}, \binits{C.J.}}:
+\batitle{Somatic loss of maternal chromosome 11 causes
+  parent-of-origin-dependent inheritance in sdhd-linked paraganglioma and
+  phaeochromocytoma families}.
+\bjtitle{Oncogene}
+\bvolume{23},
+\bfpage{4076}--\blpage{4083}
+(\byear{2004}).
+doi:\doiurl{10.1038/sj.onc.1207591}
+\end{barticle}
+\endbibitem
+
+\end{thebibliography}
+
+\newcommand{\BMCxmlcomment}[1]{}
+
+\BMCxmlcomment{
+
+<refgrp>
+
+<bibl id="B1">
+  <title><p>Germline PTEN, SDHB-D, and KLLN alterations in endometrial cancer
+  patients with Cowden and Cowden-like syndromes: An international,
+  multicenter, prospective study</p></title>
+  <aug>
+    <au><snm>Mahdi</snm><fnm>H</fnm></au>
+    <au><snm>Mester</snm><fnm>JL</fnm></au>
+    <au><snm>Nizialek</snm><fnm>EA</fnm></au>
+    <au><snm>Ngeow</snm><fnm>J</fnm></au>
+    <au><snm>Michener</snm><fnm>C</fnm></au>
+    <au><snm>Eng</snm><fnm>C</fnm></au>
+  </aug>
+  <source>Cancer</source>
+  <pubdate>2015</pubdate>
+  <volume>121</volume>
+</bibl>
+
+<bibl id="B2">
+  <title><p>Prognostic Significance of TP53 Mutations in Oral Squamous Cell
+  Carcinoma with Human Papilloma virus Infection</p></title>
+  <aug>
+    <au><snm>Kozomara</snm><fnm>R J</fnm></au>
+    <au><snm>Brankovic Magic</snm><fnm>M V</fnm></au>
+    <au><snm>Jovic</snm><fnm>N R</fnm></au>
+    <au><snm>Stosic</snm><fnm>S M</fnm></au>
+    <au><snm>Magic</snm><fnm>Z M</fnm></au>
+  </aug>
+  <source>The International Journal of Biological Markers</source>
+  <pubdate>2007</pubdate>
+  <volume>22</volume>
+  <fpage>252</fpage>
+  <lpage>257</lpage>
+  <url>https://doi.org/10.1177/172460080702200403</url>
+  <note>PMID: 18161655</note>
+</bibl>
+
+<bibl id="B3">
+  <title><p>HPV-associated diseases</p></title>
+  <aug>
+    <au><snm>Ljubojevic</snm><fnm>S</fnm></au>
+    <au><snm>Skerlev</snm><fnm>M</fnm></au>
+  </aug>
+  <source>Clinics in Dermatology</source>
+  <pubdate>2014</pubdate>
+  <volume>32</volume>
+  <fpage>227</fpage>
+  <lpage>234</lpage>
+  <url>https://www.sciencedirect.com/science/article/pii/S0738081X13001570</url>
+  <note>Update on Sexually Transmitted Infections</note>
+</bibl>
+
+<bibl id="B4">
+  <title><p>El virus del papiloma humano (VPH) y el cáncer - Instituto
+  Nacional del Cáncer</p></title>
+  <aug>
+    <au><snm>Cáncer</snm><fnm>IN</fnm></au>
+  </aug>
+  <source>2016</source>
+  <pubdate>2021</pubdate>
+</bibl>
+
+<bibl id="B5">
+  <title><p>Dermatological phenotype in Costello syndrome: Consequences of Ras
+  dysregulation in development</p></title>
+  <aug>
+    <au><snm>Siegel</snm><fnm>D. H.</fnm></au>
+    <au><snm>Mann</snm><fnm>J. A.</fnm></au>
+    <au><snm>Krol</snm><fnm>A. L.</fnm></au>
+    <au><snm>Rauen</snm><fnm>K. A.</fnm></au>
+  </aug>
+  <source>British Journal of Dermatology</source>
+  <pubdate>2012</pubdate>
+  <volume>166</volume>
+</bibl>
+
+<bibl id="B6">
+  <title><p>Phospho-Form Specific Substrates of Protein Kinase B
+  (AKT1)</p></title>
+  <aug>
+    <au><snm>McKenna</snm><fnm>M</fnm></au>
+    <au><snm>Balasuriya</snm><fnm>N</fnm></au>
+    <au><snm>Zhong</snm><fnm>S</fnm></au>
+    <au><snm>Li</snm><fnm>SSC</fnm></au>
+    <au><snm>O'Donoghue</snm><fnm>P</fnm></au>
+  </aug>
+  <source>Frontiers in Bioengineering and Biotechnology</source>
+  <pubdate>2021</pubdate>
+  <volume>8</volume>
+</bibl>
+
+<bibl id="B7">
+  <title><p>Somatic loss of maternal chromosome 11 causes
+  parent-of-origin-dependent inheritance in SDHD-linked paraganglioma and
+  phaeochromocytoma families</p></title>
+  <aug>
+    <au><snm>Hensen</snm><fnm>EF</fnm></au>
+    <au><snm>Jordanova</snm><fnm>ES</fnm></au>
+    <au><snm>Minderhout</snm><fnm>IJHM</fnm></au>
+    <au><snm>Hogendoorn</snm><fnm>PCW</fnm></au>
+    <au><snm>Taschner</snm><fnm>PEM</fnm></au>
+    <au><snm>Mey</snm><fnm>AGL</fnm></au>
+    <au><snm>Devilee</snm><fnm>P</fnm></au>
+    <au><snm>Cornelisse</snm><fnm>CJ</fnm></au>
+  </aug>
+  <source>Oncogene</source>
+  <pubdate>2004</pubdate>
+  <volume>23</volume>
+  <fpage>4076</fpage>
+  <lpage>4083</lpage>
+  <url>https://doi.org/10.1038/sj.onc.1207591</url>
+</bibl>
+
+</refgrp>
+} % end of \BMCxmlcomment
