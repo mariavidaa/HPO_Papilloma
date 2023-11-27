@@ -83,3 +83,10 @@ enrichment_df = stringdb.get_enrichment(genes)
 # Mostrar el DataFrame resultante
 print(enrichment_df)
 
+# Enriquecimiento por categorias (nuestro fdr (p-value ajustado) es tan pequeño que no vamos a considerarlo)
+# Filtramos por categorias 'Process' y 'KEGG'
+categorias = ['Process', 'KEGG']
+enrichment_df_filtrado = enrichment_df[enrichment_df['category'].isin(categorias)]
+
+# Imprimimos los resultados filtrados
+print(enrichment_df_filtrado)
