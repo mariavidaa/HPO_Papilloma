@@ -108,3 +108,30 @@ patron = '|'.join(palabras_buscadas)
 resultados_genes = enrichment_df_filtrado[enrichment_df_filtrado['inputGenes'].str.contains(patron, case=False)]
 
 resultados_genes
+
+# Descarga de la red en formato tsv
+base_url = 'https://string-db.org/api/tsv/'
+
+url_request = f"{base_url}network?identifiers={symbols}&species={species}&network_type=functional"
+response = requests.get(url_request, stream=True)
+
+if response.ok:
+    # Obtener el nombre del archivo de la URL (si está disponible)
+    content_disposition = response.headers.get('content-disposition')
+    filename = None
+
+    if content_disposition:
+        filename = content_disposition.split('filename=')[1]
+
+    # Guardar el archivo descargado
+    if filename:
+        with open(filename, 'wb') as file:
+            file.write(response.content)
+
+        print(f"Archivo {filename} descargado exitosamente.")
+    else:
+        print("No se pudo obtener el nombre del archivo. Guardando como 'red_descargada.tsv'.")
+        with open('red_descargada.tsv', 'wb') as file:
+            file.write(response.content)
+else:
+    print("Error al descargar el archivo. Código de estado:", response.status_code)
