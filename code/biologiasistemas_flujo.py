@@ -90,3 +90,11 @@ enrichment_df_filtrado = enrichment_df[enrichment_df['category'].isin(categorias
 
 # Imprimimos los resultados filtrados
 print(enrichment_df_filtrado)
+
+palabras_buscadas = ['cervix', 'ovarian', 'HPV', 'herpes', 'papillomavirus', 'costellos', 'cowden']
+
+patron = '|'.join(palabras_buscadas)
+
+resultados_enfermedades = enrichment_df[enrichment_df['description'].str.contains(patron, case=False)]
+
+resultados_enfermedades.to_csv('fueij', index = True)
