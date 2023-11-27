@@ -135,3 +135,25 @@ if response.ok:
             file.write(response.content)
 else:
     print("Error al descargar el archivo. Código de estado:", response.status_code)
+
+!pip install pandas
+
+import pandas as pd
+
+# Limpieza del archivo tsv
+# Ruta del archivo TSV descargado desde la API de StringDB
+file_path = 'red_descargada.tsv'  # Reemplaza con la ruta de tu archivo descargado
+
+# Cargar el archivo TSV
+data = pd.read_csv(file_path, sep='\t')
+
+# Seleccionar solo las columnas 'preferredName_A' y 'preferredName_B'
+selected_columns = data[['preferredName_A', 'preferredName_B']]
+
+# Eliminar duplicados
+selected_columns.drop_duplicates(inplace=True)
+
+# Guardar estas columnas en un nuevo archivo de texto
+selected_columns.to_csv('genes_igraph.txt', sep='\t', index=False, header=False)
+
+print("Se han guardado las columnas 'preferredName_A' y 'preferredName_B' en genes_igraph.txt")
