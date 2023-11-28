@@ -1,6 +1,6 @@
 ---
 title: "biologiasistemas_igrapgh"
-author: "Maria Vida Montañez"
+author: "Maria Vida Montañez y María José Hidalgo Rodríguez"
 date: "2023-11-18"
 output: html_document
 ---
@@ -11,7 +11,7 @@ output: html_document
 # Importamos libreria
 library(igraph)
 # Cargamos los datos
-genes <- read.table('./genes_igraph.txt', sep='\t', header=FALSE, stringsAsFactors=FALSE)
+genes <- read.table("genes_igraph.txt", sep = '\t', header = FALSE, stringsAsFactors = FALSE)
 #Creamos un nuevo grafo no dirigido a partir de esta información
 net <- graph_from_data_frame(genes, directed=F)
 ```
@@ -108,5 +108,32 @@ options(repr.plot.width=9, repr.plot.height=9)
 par(cex = 0.5)
 plot(lc, type = "graph", layout = "spencer.circle")
 
+```
+
+## Estudio genes de interes
+
+Comparamos las relaciones establecidas con strindb en funcion de las enfermedades con la tabla que obtenemos a continuacion. 
+
+```{r}
+# Genes de interés
+genes_interes <- c("TP53", "HRAS", "AKT1", "SDHB", "SDHD")
+
+# Función para encontrar vecinos interesantes
+encontrar_vecinos_interesantes <- function(gen, genes_interes) {
+  vecinos <- neighbors(net, gen)$name
+  vecinos_interesantes <- vecinos[vecinos %in% genes_interes]
+  return(paste(vecinos_interesantes, collapse = ", "))
+}
+
+# Crear la tabla
+tabla_genes <- data.frame(Gen = genes_interes)
+
+# Agregar la columna de vecinos interesantes como cadenas de texto
+tabla_genes$Vecinos_Interesantes <- sapply(genes_interes, function(gen) {
+  encontrar_vecinos_interesantes(gen, genes_interes)
+})
+
+# Imprimir la tabla
+print(tabla_genes)
 ```
 
