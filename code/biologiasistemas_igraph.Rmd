@@ -59,6 +59,9 @@ dendPlot(community, mode="hclust")
 # Mostramos el grafo con las clusters detectados
 par(cex = 0.4)
 plot(community, net)
+# Guardamos la imagen en la carpeta results
+dev.copy(png, filename = "../results/clustering_in_betweeness.png", width = 800, height = 600)  
+dev.off()
 ```
 
 Metodo de Girvan-Newman. Este método, basado en la centralidad de intermediación (betweenness), busca identificar comunidades cortando enlaces que conectan las partes más densas de la red. Hay nodos que no pertenecen a ninguna comunidad. Esto puede deberse a la forma en que el algoritmo de betweenness identifica comunidades. Puede detectar comunidades basándose en la centralidad de intermediación de los nodos, y algunos nodos pueden no estar claramente vinculados a una comunidad en función de esta medida.
@@ -68,6 +71,9 @@ Metodo de Girvan-Newman. Este método, basado en la centralidad de intermediaci�
 cfg <- cluster_fast_greedy(as.undirected(net))
 par(cex = 0.4)
 plot(cfg, as.undirected(net))
+# Guardamos la imagen en la carpeta results
+dev.copy(png, filename = "../results/clustering_fast_greedy.png", width = 800, height = 600)  
+dev.off()
 ```
 
 Podemos ver que con este tipo de metodo todos los nodos pertenecen a alguna comunidad. El algoritmo de optimización voraz busca maximizar la modularidad de la red, dividiéndola en comunidades más densamente conectadas internamente.
@@ -78,6 +84,9 @@ V(net)$community <- cfg$membership
 colrs <- adjustcolor( c("gray50", "tomato", "gold", "yellowgreen", "blue"), alpha=.6)
 par(cex = 0.4)
 plot(net, vertex.color=colrs[V(net)$community])
+# Guardamos la imagen en la carpeta results
+dev.copy(png, filename = "../results/clustering_coloreado.png", width = 800, height = 600)  
+dev.off()
 ```
 
 ```{r}
@@ -85,6 +94,9 @@ plot(net, vertex.color=colrs[V(net)$community])
 clp <- cluster_label_prop(net)
 par(cex = 0.4)
 plot(clp, net)
+# Guardamos la imagen en la carpeta results
+dev.copy(png, filename = "../results/clustering_label_prop.png", width = 800, height = 600)  
+dev.off()
 ```
 
 En este caso solo ha identificado a dos comunidades. La propagación de etiquetas es un enfoque basado en la difusión de información a través de la red. Puede ocurrir que esta técnica agrupe nodos que están fuertemente conectados, pero puede no ser tan sensible a las sutilezas de la modularidad como otros algoritmos.
@@ -93,6 +105,9 @@ En este caso solo ha identificado a dos comunidades. La propagación de etiqueta
 community_louvain <- cluster_louvain(net)
 par(cex = 0.4)
 plot(community_louvain, net)
+# Guardamos la imagen en la carpeta results
+dev.copy(png, filename = "../results/clustering_louvain.png", width = 800, height = 600)  
+dev.off()
 ```
 
 El algoritmo de Louvain es muy popular y eficiente. Este método busca maximizar la modularidad de la red y es conocido por su velocidad en comparación con algunos otros algoritmos. En este caso hemos obtenido 4 comunidades en vez de 5.
@@ -113,7 +128,9 @@ En las graficas anteriores vemos como las comunidades se solapaban, lo que no po
 options(repr.plot.width=9, repr.plot.height=9)
 par(cex = 0.5)
 plot(lc, type = "graph", layout = "spencer.circle")
-
+# Guardamos la imagen en la carpeta results
+dev.copy(png, filename = "../results/clustering_link_communities.png", width = 800, height = 600)  
+dev.off()
 ```
 
 ## Estudio genes de interes
