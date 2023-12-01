@@ -11,7 +11,7 @@ output: html_document
 # Importamos libreria
 library(igraph)
 # Cargamos los datos
-genes <- read.table("genes_igraph.txt", sep = '\t', header = FALSE, stringsAsFactors = FALSE)
+genes <- read.table("../results/genes_igraph.txt", sep = '\t', header = FALSE, stringsAsFactors = FALSE)
 #Creamos un nuevo grafo no dirigido a partir de esta información
 net <- graph_from_data_frame(genes, directed=F)
 ```
@@ -26,20 +26,24 @@ plot(net)
 # Comprobamos que no hay ningun nodo sin conexión.
 is.connected(net)
 ```
+
 ```{r}
 # Comprobamos que no es dirigido
 is.directed(net)
 ```
+
 ```{r}
 # Grado centralidad: numero de conexiones de cada gen
 degree_centrality <- degree(net)
 degree_centrality
 ```
+
 ```{r}
 # Centralidad de cercanía: Mide la distancia promedio entre un nodo y todos los demás nodos
 closeness_centrality <- closeness(net)
 closeness_centrality
 ```
+
 ```{r}
 # Conectividad:Mide la fortaleza de la conexión en el grafo.
 connectivity <- edge_density(net)
@@ -56,6 +60,7 @@ dendPlot(community, mode="hclust")
 par(cex = 0.4)
 plot(community, net)
 ```
+
 Metodo de Girvan-Newman. Este método, basado en la centralidad de intermediación (betweenness), busca identificar comunidades cortando enlaces que conectan las partes más densas de la red. Hay nodos que no pertenecen a ninguna comunidad. Esto puede deberse a la forma en que el algoritmo de betweenness identifica comunidades. Puede detectar comunidades basándose en la centralidad de intermediación de los nodos, y algunos nodos pueden no estar claramente vinculados a una comunidad en función de esta medida.
 
 ```{r}
@@ -64,6 +69,7 @@ cfg <- cluster_fast_greedy(as.undirected(net))
 par(cex = 0.4)
 plot(cfg, as.undirected(net))
 ```
+
 Podemos ver que con este tipo de metodo todos los nodos pertenecen a alguna comunidad. El algoritmo de optimización voraz busca maximizar la modularidad de la red, dividiéndola en comunidades más densamente conectadas internamente.
 
 ```{r}
@@ -80,6 +86,7 @@ clp <- cluster_label_prop(net)
 par(cex = 0.4)
 plot(clp, net)
 ```
+
 En este caso solo ha identificado a dos comunidades. La propagación de etiquetas es un enfoque basado en la difusión de información a través de la red. Puede ocurrir que esta técnica agrupe nodos que están fuertemente conectados, pero puede no ser tan sensible a las sutilezas de la modularidad como otros algoritmos.
 
 ```{r}
@@ -88,7 +95,7 @@ par(cex = 0.4)
 plot(community_louvain, net)
 ```
 
-El algoritmo de Louvain es muy popular y eficiente. Este método busca maximizar la modularidad de la red y es conocido por su velocidad en comparación con algunos otros algoritmos. En este caso hemos obtenido 4 comunidades en vez de 5. 
+El algoritmo de Louvain es muy popular y eficiente. Este método busca maximizar la modularidad de la red y es conocido por su velocidad en comparación con algunos otros algoritmos. En este caso hemos obtenido 4 comunidades en vez de 5.
 
 ```{r}
 library(linkcomm)
@@ -99,8 +106,7 @@ lc <- getLinkCommunities(genes)
 
 ```
 
-
-En las graficas anteriores vemos como las comunidades se solapaban, lo que no podia indicar que hay nodos que pueden pertenecer a mas de una comunidad. Para estudiar este hecho vamos a hacer uso de Link Communites. 
+En las graficas anteriores vemos como las comunidades se solapaban, lo que no podia indicar que hay nodos que pueden pertenecer a mas de una comunidad. Para estudiar este hecho vamos a hacer uso de Link Communites.
 
 ```{r}
 # Visualiza las link communities
@@ -112,7 +118,7 @@ plot(lc, type = "graph", layout = "spencer.circle")
 
 ## Estudio genes de interes
 
-Comparamos las relaciones establecidas con strindb en funcion de las enfermedades con la tabla que obtenemos a continuacion. 
+Comparamos las relaciones establecidas con strindb en funcion de las enfermedades con la tabla que obtenemos a continuacion.
 
 ```{r}
 # Genes de interés
@@ -137,3 +143,43 @@ tabla_genes$Vecinos_Interesantes <- sapply(genes_interes, function(gen) {
 print(tabla_genes)
 ```
 
+## Enriquecimiento
+
+```{r}
+# Instala el paquete si aún no lo has hecho
+if (!requireNamespace("enrichR", quietly = TRUE))
+  install.packages("enrichR")
+
+if (!requireNamespace("reshape2", quietly = TRUE))
+  install.packages("reshape2")
+
+# Carga la librería
+library(enrichR)
+
+# Obtener la pertenencia del nodo a cada cluster
+membership <- membership(cfg)
+
+# Iterar sobre cada cluster
+for (i in unique(membership)) {
+  # Obtener los nodos pertenecientes al cluster actual
+  nodes_in_cluster <- which(membership == i)
+  
+  # Obtener los nombres de genes en el cluster
+  genes_in_cluster <- names(nodes_in_cluster)
+  
+  # Realizar enriquecimiento funcional con enrichR (usando la base de datos GO como ejemplo)
+  enrich_result <- enrichr(genes = genes_in_cluster, c("GO_Biological_Process_2021"))
+  
+  # Imprimir resultados o hacer cualquier otro procesamiento
+  cat("Enriquecimiento funcional para el Cluster", i, ":\n")
+  print(enrich_result)
+  
+  # Generar un nombre de archivo único para cada cluster
+  file_name <- paste0("enrichment_cluster_", i, ".csv")
+  
+  # Guardar los resultados en un archivo CSV
+  write.table(enrich_result, file = file_name, sep = ",", quote = FALSE, col.names = TRUE, row.names = FALSE)
+}
+
+
+```
