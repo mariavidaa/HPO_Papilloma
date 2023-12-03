@@ -35,7 +35,12 @@ is.directed(net)
 ```{r}
 # Grado centralidad: numero de conexiones de cada gen
 degree_centrality <- degree(net)
-degree_centrality
+# Creamos el dataframe con los resultados
+result_df <- data.frame(Gene = names(degree_centrality), Degree_Centrality = degree_centrality)
+# Imprimimos resultados
+print(result_df)
+# Guardamos los resultados
+write.table(result_df, file = "../results/degree_centrality_results.txt", sep = "\t", quote = FALSE, row.names = FALSE)
 ```
 
 ```{r}
@@ -158,6 +163,9 @@ tabla_genes$Vecinos_Interesantes <- sapply(genes_interes, function(gen) {
 
 # Imprimir la tabla
 print(tabla_genes)
+
+# Guardamos los resultados
+write.table(tabla_genes, file = "../results/tabla_genes.csv", sep = "\t", quote = FALSE, row.names = FALSE)
 ```
 
 ## Enriquecimiento
