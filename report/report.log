@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.10.6)  3 DEC 2023 22:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.10.6)  3 DEC 2023 23:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -302,9 +302,23 @@ LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <8> not available
  [1{C:/Users/MariaVida/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
 ]) (tex_files/material_methods.tex [2])
-(tex_files/resultados.tex) (tex_files/discusion.tex)
-(tex_files/conclusiones.tex) (report.bbl [3]) [4]
+(tex_files/resultados.tex
 
+! LaTeX Error: File `grado_centralidad' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11 ...cs[width=0.8\linewidth]{grado_centralidad}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+) (tex_files/discusion.tex) (tex_files/conclusiones.tex) [3] (report.bbl)
+[4] 
 enddocument/afterlastpage: lastpage setting LastPage.
 (report.aux)
  ***********
@@ -316,15 +330,18 @@ L3 programming layer <2023-08-29>
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 3946 strings out of 475247
- 63137 string characters out of 5755904
- 1929785 words of memory out of 5000000
- 25410 multiletter control sequences out of 15000+600000
- 564693 words of font info for 59 fonts, out of 8000000 for 9000
+ 3980 strings out of 475247
+ 64045 string characters out of 5755904
+ 1928785 words of memory out of 5000000
+ 25444 multiletter control sequences out of 15000+600000
+ 564987 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 85i,9n,79p,926b,518s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 85i,9n,79p,926b,349s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/MariaVida/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb><C:/Users/MariaVida/AppData/Local/Programs/MiKTeX/fonts/type1/pu
 blic/amsfonts/cm/cmmi10.pfb><C:/Users/MariaVida/AppData/Local/Programs/MiKTeX/f
@@ -335,7 +352,7 @@ iaVida/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><
 C:/Users/MariaVida/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
 /cmssbx10.pfb><C:/Users/MariaVida/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/amsfonts/cm/cmssi8.pfb>
-Output written on report.pdf (4 pages, 132155 bytes).
+Output written on report.pdf (4 pages, 133229 bytes).
 PDF statistics:
  55 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
