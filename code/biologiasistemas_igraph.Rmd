@@ -35,12 +35,7 @@ is.directed(net)
 ```{r}
 # Grado centralidad: numero de conexiones de cada gen
 degree_centrality <- degree(net)
-# Creamos el dataframe con los resultados
-result_df <- data.frame(Gene = names(degree_centrality), Degree_Centrality = degree_centrality)
-# Imprimimos resultados
-print(result_df)
-# Guardamos los resultados
-write.table(result_df, file = "../results/degree_centrality_results.txt", sep = "\t", quote = FALSE, row.names = FALSE)
+degree_centrality
 ```
 
 ```{r}
@@ -163,48 +158,38 @@ tabla_genes$Vecinos_Interesantes <- sapply(genes_interes, function(gen) {
 
 # Imprimir la tabla
 print(tabla_genes)
-
-# Guardamos los resultados
-write.table(tabla_genes, file = "../results/tabla_genes.csv", sep = "\t", quote = FALSE, row.names = FALSE)
 ```
-
-## Enriquecimiento
+## Guardamos comunidad importante
 
 ```{r}
-# Instala el paquete si aún no lo has hecho
-if (!requireNamespace("enrichR", quietly = TRUE))
-  install.packages("enrichR")
+# Identifica los genes de interés
+genes_interes <- c("AKT1", "TP53", "SDHD", "SDHB", "HRAS")
 
-if (!requireNamespace("reshape2", quietly = TRUE))
-  install.packages("reshape2")
+# Encuentra los índices de los nodos que representan los genes de interés
+nodos_genes_interes <- V(net)$name %in% genes_interes
 
-# Carga la librería
-library(enrichR)
+# Encuentra el índice del cluster que contiene los genes de interés
+cluster_containing_genes <- membership(cfg)[nodos_genes_interes]
 
-# Obtener la pertenencia del nodo a cada cluster
-membership <- membership(cfg)
+# Guarda los genes de ese cluster en un archivo de texto
+genes_cluster <- V(net)$name[membership(cfg) == cluster_containing_genes]
 
-# Iterar sobre cada cluster
-for (i in unique(membership)) {
-  # Obtener los nodos pertenecientes al cluster actual
-  nodes_in_cluster <- which(membership == i)
-  
-  # Obtener los nombres de genes en el cluster
-  genes_in_cluster <- names(nodes_in_cluster)
-  
-  # Realizar enriquecimiento funcional con enrichR (usando la base de datos GO como ejemplo)
-  enrich_result <- enrichr(genes = genes_in_cluster, c("GO_Biological_Process_2021"))
-  
-  # Imprimir resultados o hacer cualquier otro procesamiento
-  cat("Enriquecimiento funcional para el Cluster", i, ":\n")
-  print(enrich_result)
-  
-  # Generar un nombre de archivo único para cada cluster
-  file_name <- paste0("enrichment_cluster_", i, ".csv")
-  
-  # Guardar los resultados en un archivo CSV
-  write.table(enrich_result, file = file_name, sep = ",", quote = FALSE, col.names = TRUE, row.names = FALSE)
-}
+genes_cluster
 
 
 ```
+
+```{r}
+# Ruta y nombre del archivo de texto
+ruta_archivo <- "../results/genes_cluster.txt"
+
+# Guardar la variable genes_cluster en un archivo de texto
+write.table(genes_cluster, file = ruta_archivo, quote = FALSE, col.names = FALSE, row.names = FALSE)
+
+
+# Imprimir mensaje de confirmación
+cat("Los genes del cluster se han guardado en el archivo:", ruta_archivo, "\n")
+
+```
+
+
