@@ -32,3 +32,8 @@ Para estudiar mejor a qué comunidad pertenece cada nodo, visualizamos el result
 
 En tercer lugar, estudiamos la interacción de nuestros \textbf{genes de interés} especificados anteriormente: TP53, HRAS, AKT1, SDHB, SDHD. Para ellos creamos una función que nos devolvía una tabla con los vecinos de cada uno de estos genes para saber si entre ellos estaban relacionados.
 
+\vspace{3pt}
+
+En último lugar, tras estudiar la detección de comunidades optamos por realizar un enriquecimiento funcional para la comunidad identificada donde se encuentren nuestros genes de interés. Para ello, hemos guardado los genes que conforman la comunidad donde se encuentran los genes de interés en un archivo y hemos realizado un enriquecimiento funcional de estos genes filtrando para quedarnos con las entradas de categoría HPO \cite{hpojax} (para relacionar estos genes con fenotipos patológicos).  Estos datos se guardan en un archivo de extensión csv y hemos consultado las entradas de este buscando por palabras clave (papilloma, genital, renal, carcinoma, ovarian, ovary, ovaries, uterine). 
+
+
