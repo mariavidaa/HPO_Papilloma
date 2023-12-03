@@ -1,0 +1,11 @@
+#!/usr/bin/env Rscript
+
+# igraph
+if (!require("igraph")) {
+    install.packages("igraph")
+}
+
+# enrichR
+if (!require("enrichR")) {
+    install.packages("enrichR")
+}
