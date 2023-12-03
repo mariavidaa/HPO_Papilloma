@@ -21,60 +21,54 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: bibliography.bib
-Repeated entry---line 119 of file bibliography.bib
+Repeated entry---line 121 of file bibliography.bib
  : @article{Siegel2012
  :                    ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "koon"
-Warning--I didn't find a database entry for "xjon"
-Warning--I didn't find a database entry for "marg"
-Warning--I didn't find a database entry for "schn"
-Warning--I didn't find a database entry for "koha"
-Warning--I didn't find a database entry for "issnic"
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
-You've used 7 entries,
+You've used 11 entries,
             7128 wiz_defined-function locations,
-            1186 strings with 11083 characters,
-and the built_in function-call counts, 41851 in all, are:
-= -- 4977
-> -- 232
-< -- 112
-+ -- 843
-- -- 83
-* -- 3501
-:= -- 8522
-add.period$ -- 14
-call.type$ -- 7
-change.case$ -- 68
-chr.to.int$ -- 199
-cite$ -- 7
-duplicate$ -- 706
-empty$ -- 2703
-format.name$ -- 303
-if$ -- 8990
+            1210 strings with 11832 characters,
+and the built_in function-call counts, 57771 in all, are:
+= -- 7059
+> -- 306
+< -- 139
++ -- 1316
+- -- 121
+* -- 4629
+:= -- 11896
+add.period$ -- 21
+call.type$ -- 11
+change.case$ -- 100
+chr.to.int$ -- 215
+cite$ -- 11
+duplicate$ -- 1005
+empty$ -- 3574
+format.name$ -- 410
+if$ -- 12485
 int.to.chr$ -- 1
-int.to.str$ -- 16
-missing$ -- 260
-newline$ -- 268
-num.names$ -- 35
-pop$ -- 327
+int.to.str$ -- 27
+missing$ -- 392
+newline$ -- 366
+num.names$ -- 55
+pop$ -- 500
 preamble$ -- 1
-purify$ -- 29
-quote$ -- 14
-skip$ -- 2132
+purify$ -- 48
+quote$ -- 22
+skip$ -- 3104
 stack$ -- 0
-substring$ -- 6345
-swap$ -- 197
-text.length$ -- 103
+substring$ -- 8346
+swap$ -- 244
+text.length$ -- 164
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 243
+type$ -- 348
 warning$ -- 0
-while$ -- 251
+while$ -- 361
 width$ -- 0
-write$ -- 362
+write$ -- 494
 (There was 1 error message)

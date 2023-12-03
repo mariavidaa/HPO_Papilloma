@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{7}
+\begin{thebibliography}{11}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -43,25 +43,6 @@
 \csname PreBibitemsHook\endcsname
 
 %%% 1
-\bibitem{Mahdi2015}
-\begin{botherref}
-\oauthor{\bsnm{Mahdi}, \binits{H.}},
-\oauthor{\bsnm{Mester}, \binits{J.L.}},
-\oauthor{\bsnm{Nizialek}, \binits{E.A.}},
-\oauthor{\bsnm{Ngeow}, \binits{J.}},
-\oauthor{\bsnm{Michener}, \binits{C.}},
-\oauthor{\bsnm{Eng}, \binits{C.}}:
-Germline pten, sdhb-d, and klln alterations in endometrial cancer patients with
-  cowden and cowden-like syndromes: An international, multicenter, prospective
-  study.
-Cancer
-\textbf{121}
-(2015).
-doi:\doiurl{10.1002/cncr.29106}
-\end{botherref}
-\endbibitem
-
-%%% 2
 \bibitem{Kozomara2007}
 \begin{barticle}
 \bauthor{\bsnm{Kozomara}, \binits{R.J.}},
@@ -80,7 +61,7 @@ doi:\doiurl{10.1177/172460080702200403}.
 \end{barticle}
 \endbibitem
 
-%%% 3
+%%% 2
 \bibitem{Ljubojevic2014}
 \begin{barticle}
 \bauthor{\bsnm{Ljubojevic}, \binits{S.}},
@@ -95,7 +76,7 @@ doi:\doiurl{10.1016/j.clindermatol.2013.08.007}.
 \end{barticle}
 \endbibitem
 
-%%% 4
+%%% 3
 \bibitem{papiloma}
 \begin{botherref}
 \oauthor{\bparticle{del} \bsnm{Cáncer}, \binits{I.N.}}:
@@ -105,7 +86,7 @@ El virus del papiloma humano (VPH) y el cáncer - Instituto Nacional del
 \end{botherref}
 \endbibitem
 
-%%% 5
+%%% 4
 \bibitem{Siegel2012}
 \begin{botherref}
 \oauthor{\bsnm{Siegel}, \binits{D.H.}},
@@ -121,7 +102,7 @@ doi:\doiurl{10.1111/j.1365-2133.2011.10744.x}
 \end{botherref}
 \endbibitem
 
-%%% 6
+%%% 5
 \bibitem{McKenna2021}
 \begin{botherref}
 \oauthor{\bsnm{McKenna}, \binits{M.}},
@@ -137,7 +118,7 @@ doi:\doiurl{10.3389/fbioe.2020.619252}
 \end{botherref}
 \endbibitem
 
-%%% 7
+%%% 6
 \bibitem{Hensen2004}
 \begin{barticle}
 \bauthor{\bsnm{Hensen}, \binits{E.F.}},
@@ -159,6 +140,78 @@ doi:\doiurl{10.1038/sj.onc.1207591}
 \end{barticle}
 \endbibitem
 
+%%% 7
+\bibitem{Mahdi2015}
+\begin{botherref}
+\oauthor{\bsnm{Mahdi}, \binits{H.}},
+\oauthor{\bsnm{Mester}, \binits{J.L.}},
+\oauthor{\bsnm{Nizialek}, \binits{E.A.}},
+\oauthor{\bsnm{Ngeow}, \binits{J.}},
+\oauthor{\bsnm{Michener}, \binits{C.}},
+\oauthor{\bsnm{Eng}, \binits{C.}}:
+Germline pten, sdhb-d, and klln alterations in endometrial cancer patients with
+  cowden and cowden-like syndromes: An international, multicenter, prospective
+  study.
+Cancer
+\textbf{121}
+(2015).
+doi:\doiurl{10.1002/cncr.29106}
+\end{botherref}
+\endbibitem
+
+%%% 8
+\bibitem{Zahiri2023}
+\begin{botherref}
+\oauthor{\bsnm{Zahiri}, \binits{M.}},
+\oauthor{\bsnm{Mohammadzadeh}, \binits{J.}},
+\oauthor{\bsnm{Harifi}, \binits{S.}}:
+An improved girvan–newman community detection algorithm using trust-based
+  centrality.
+Journal of Ambient Intelligence and Humanized Computing
+\textbf{14}
+(2023).
+doi:\doiurl{10.1007/s12652-021-03508-y}
+\end{botherref}
+\endbibitem
+
+%%% 9
+\bibitem{Curtis2003}
+\begin{botherref}
+\oauthor{\bsnm{Curtis}, \binits{S.A.}}:
+The classification of greedy algorithms.
+Science of Computer Programming
+\textbf{49}
+(2003).
+doi:\doiurl{10.1016/j.scico.2003.09.001}
+\end{botherref}
+\endbibitem
+
+%%% 10
+\bibitem{Garza2019}
+\begin{botherref}
+\oauthor{\bsnm{Garza}, \binits{S.E.}},
+\oauthor{\bsnm{Schaeffer}, \binits{S.E.}}:
+Community detection with the Label Propagation Algorithm: A survey
+(2019).
+doi:\doiurl{10.1016/j.physa.2019.122058}
+\end{botherref}
+\endbibitem
+
+%%% 11
+\bibitem{Zhang2021}
+\begin{botherref}
+\oauthor{\bsnm{Zhang}, \binits{J.}},
+\oauthor{\bsnm{Fei}, \binits{J.}},
+\oauthor{\bsnm{Song}, \binits{X.}},
+\oauthor{\bsnm{Feng}, \binits{J.}}:
+An improved louvain algorithm for community detection.
+Mathematical Problems in Engineering
+\textbf{2021}
+(2021).
+doi:\doiurl{10.1155/2021/1485592}
+\end{botherref}
+\endbibitem
+
 \end{thebibliography}
 
 \newcommand{\BMCxmlcomment}[1]{}
@@ -168,23 +221,6 @@ doi:\doiurl{10.1038/sj.onc.1207591}
 <refgrp>
 
 <bibl id="B1">
-  <title><p>Germline PTEN, SDHB-D, and KLLN alterations in endometrial cancer
-  patients with Cowden and Cowden-like syndromes: An international,
-  multicenter, prospective study</p></title>
-  <aug>
-    <au><snm>Mahdi</snm><fnm>H</fnm></au>
-    <au><snm>Mester</snm><fnm>JL</fnm></au>
-    <au><snm>Nizialek</snm><fnm>EA</fnm></au>
-    <au><snm>Ngeow</snm><fnm>J</fnm></au>
-    <au><snm>Michener</snm><fnm>C</fnm></au>
-    <au><snm>Eng</snm><fnm>C</fnm></au>
-  </aug>
-  <source>Cancer</source>
-  <pubdate>2015</pubdate>
-  <volume>121</volume>
-</bibl>
-
-<bibl id="B2">
   <title><p>Prognostic Significance of TP53 Mutations in Oral Squamous Cell
   Carcinoma with Human Papilloma virus Infection</p></title>
   <aug>
@@ -203,7 +239,7 @@ doi:\doiurl{10.1038/sj.onc.1207591}
   <note>PMID: 18161655</note>
 </bibl>
 
-<bibl id="B3">
+<bibl id="B2">
   <title><p>HPV-associated diseases</p></title>
   <aug>
     <au><snm>Ljubojevic</snm><fnm>S</fnm></au>
@@ -218,7 +254,7 @@ doi:\doiurl{10.1038/sj.onc.1207591}
   <note>Update on Sexually Transmitted Infections</note>
 </bibl>
 
-<bibl id="B4">
+<bibl id="B3">
   <title><p>El virus del papiloma humano (VPH) y el cáncer - Instituto
   Nacional del Cáncer</p></title>
   <aug>
@@ -228,7 +264,7 @@ doi:\doiurl{10.1038/sj.onc.1207591}
   <pubdate>2021</pubdate>
 </bibl>
 
-<bibl id="B5">
+<bibl id="B4">
   <title><p>Dermatological phenotype in Costello syndrome: Consequences of Ras
   dysregulation in development</p></title>
   <aug>
@@ -242,7 +278,7 @@ doi:\doiurl{10.1038/sj.onc.1207591}
   <volume>166</volume>
 </bibl>
 
-<bibl id="B6">
+<bibl id="B5">
   <title><p>Phospho-Form Specific Substrates of Protein Kinase B
   (AKT1)</p></title>
   <aug>
@@ -257,7 +293,7 @@ doi:\doiurl{10.1038/sj.onc.1207591}
   <volume>8</volume>
 </bibl>
 
-<bibl id="B7">
+<bibl id="B6">
   <title><p>Somatic loss of maternal chromosome 11 causes
   parent-of-origin-dependent inheritance in SDHD-linked paraganglioma and
   phaeochromocytoma families</p></title>
@@ -277,6 +313,71 @@ doi:\doiurl{10.1038/sj.onc.1207591}
   <fpage>4076</fpage>
   <lpage>4083</lpage>
   <url>https://doi.org/10.1038/sj.onc.1207591</url>
+</bibl>
+
+<bibl id="B7">
+  <title><p>Germline PTEN, SDHB-D, and KLLN alterations in endometrial cancer
+  patients with Cowden and Cowden-like syndromes: An international,
+  multicenter, prospective study</p></title>
+  <aug>
+    <au><snm>Mahdi</snm><fnm>H</fnm></au>
+    <au><snm>Mester</snm><fnm>JL</fnm></au>
+    <au><snm>Nizialek</snm><fnm>EA</fnm></au>
+    <au><snm>Ngeow</snm><fnm>J</fnm></au>
+    <au><snm>Michener</snm><fnm>C</fnm></au>
+    <au><snm>Eng</snm><fnm>C</fnm></au>
+  </aug>
+  <source>Cancer</source>
+  <pubdate>2015</pubdate>
+  <volume>121</volume>
+</bibl>
+
+<bibl id="B8">
+  <title><p>An improved Girvan–Newman community detection algorithm using
+  trust-based centrality</p></title>
+  <aug>
+    <au><snm>Zahiri</snm><fnm>M</fnm></au>
+    <au><snm>Mohammadzadeh</snm><fnm>J</fnm></au>
+    <au><snm>Harifi</snm><fnm>S</fnm></au>
+  </aug>
+  <source>Journal of Ambient Intelligence and Humanized Computing</source>
+  <pubdate>2023</pubdate>
+  <volume>14</volume>
+</bibl>
+
+<bibl id="B9">
+  <title><p>The classification of greedy algorithms</p></title>
+  <aug>
+    <au><snm>Curtis</snm><fnm>S. A.</fnm></au>
+  </aug>
+  <source>Science of Computer Programming</source>
+  <pubdate>2003</pubdate>
+  <volume>49</volume>
+</bibl>
+
+<bibl id="B10">
+  <title><p>Community detection with the Label Propagation Algorithm: A
+  survey</p></title>
+  <aug>
+    <au><snm>Garza</snm><fnm>SE</fnm></au>
+    <au><snm>Schaeffer</snm><fnm>SE</fnm></au>
+  </aug>
+  <source>Physica A: Statistical Mechanics and its Applications</source>
+  <pubdate>2019</pubdate>
+  <volume>534</volume>
+</bibl>
+
+<bibl id="B11">
+  <title><p>An Improved Louvain Algorithm for Community Detection</p></title>
+  <aug>
+    <au><snm>Zhang</snm><fnm>J</fnm></au>
+    <au><snm>Fei</snm><fnm>J</fnm></au>
+    <au><snm>Song</snm><fnm>X</fnm></au>
+    <au><snm>Feng</snm><fnm>J</fnm></au>
+  </aug>
+  <source>Mathematical Problems in Engineering</source>
+  <pubdate>2021</pubdate>
+  <volume>2021</volume>
 </bibl>
 
 </refgrp>
