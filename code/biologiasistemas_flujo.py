@@ -127,4 +127,4 @@ selected_columns.drop_duplicates(inplace=True)
 # Guardar estas columnas en un nuevo archivo de texto
 selected_columns.to_csv('../results/genes_igraph.txt', sep='\t', index=False, header=False)
 
-print("Se han guardado las columnas 'preferredName_A' y 'preferredName_B' en genes_igraph.txt")
+print("Se han guardado las columnas 'preferredName_A' y 'preferredName_B' en results/genes_igraph.txt")
