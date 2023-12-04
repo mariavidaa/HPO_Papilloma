@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{11}
+\begin{thebibliography}{19}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -160,6 +160,152 @@ doi:\doiurl{10.1002/cncr.29106}
 \endbibitem
 
 %%% 8
+\bibitem{HPO}
+\begin{botherref}
+\oauthor{\bsnm{Köhler}, \binits{S.}},
+\oauthor{\bsnm{Gargano}, \binits{M.}},
+\oauthor{\bsnm{Matentzoglu}, \binits{N.}},
+\oauthor{\bsnm{Carmody}, \binits{L.C.}},
+\oauthor{\bsnm{Lewis-Smith}, \binits{D.}},
+\oauthor{\bsnm{Vasilevsky}, \binits{N.A.}},
+\oauthor{\bsnm{Danis}, \binits{D.}},
+\oauthor{\bsnm{Balagura}, \binits{G.}},
+\oauthor{\bsnm{Baynam}, \binits{G.}},
+\oauthor{\bsnm{Brower}, \binits{A.M.}},
+\oauthor{\bsnm{Callahan}, \binits{T.J.}},
+\oauthor{\bsnm{Chute}, \binits{C.G.}},
+\oauthor{\bsnm{Est}, \binits{J.L.}},
+\oauthor{\bsnm{Galer}, \binits{P.D.}},
+\oauthor{\bsnm{Ganesan}, \binits{S.}},
+\oauthor{\bsnm{Griese}, \binits{M.}},
+\oauthor{\bsnm{Haimel}, \binits{M.}},
+\oauthor{\bsnm{Pazmandi}, \binits{J.}},
+\oauthor{\bsnm{Hanauer}, \binits{M.}},
+\oauthor{\bsnm{Harris}, \binits{N.L.}},
+\oauthor{\bsnm{Hartnett}, \binits{M.J.}},
+\oauthor{\bsnm{Hastreiter}, \binits{M.}},
+\oauthor{\bsnm{Hauck}, \binits{F.}},
+\oauthor{\bsnm{He}, \binits{Y.}},
+\oauthor{\bsnm{Jeske}, \binits{T.}},
+\oauthor{\bsnm{Kearney}, \binits{H.}},
+\oauthor{\bsnm{Kindle}, \binits{G.}},
+\oauthor{\bsnm{Klein}, \binits{C.}},
+\oauthor{\bsnm{Knoflach}, \binits{K.}},
+\oauthor{\bsnm{Krause}, \binits{R.}},
+\oauthor{\bsnm{Lagorce}, \binits{D.}},
+\oauthor{\bsnm{McMurry}, \binits{J.A.}},
+\oauthor{\bsnm{Miller}, \binits{J.A.}},
+\oauthor{\bsnm{Munoz-Torres}, \binits{M.C.}},
+\oauthor{\bsnm{Peters}, \binits{R.L.}},
+\oauthor{\bsnm{Rapp}, \binits{C.K.}},
+\oauthor{\bsnm{Rath}, \binits{A.M.}},
+\oauthor{\bsnm{Rind}, \binits{S.A.}},
+\oauthor{\bsnm{Rosenberg}, \binits{A.Z.}},
+\oauthor{\bsnm{Segal}, \binits{M.M.}},
+\oauthor{\bsnm{Seidel}, \binits{M.G.}},
+\oauthor{\bsnm{Smedley}, \binits{D.}},
+\oauthor{\bsnm{Talmy}, \binits{T.}},
+\oauthor{\bsnm{Thomas}, \binits{Y.}},
+\oauthor{\bsnm{Wiafe}, \binits{S.A.}},
+\oauthor{\bsnm{Xian}, \binits{J.}},
+\oauthor{\bsnm{Yüksel}, \binits{Z.}},
+\oauthor{\bsnm{Helbig}, \binits{I.}},
+\oauthor{\bsnm{Mungall}, \binits{C.J.}},
+\oauthor{\bsnm{Haendel}, \binits{M.A.}},
+\oauthor{\bsnm{Robinson}, \binits{P.N.}}:
+The human phenotype ontology in 2021.
+Nucleic Acids Research
+\textbf{49}
+(2021).
+doi:\doiurl{10.1093/nar/gkaa1043}
+\end{botherref}
+\endbibitem
+
+%%% 9
+\bibitem{Giorgi2022}
+\begin{botherref}
+\oauthor{\bsnm{Giorgi}, \binits{F.M.}},
+\oauthor{\bsnm{Ceraolo}, \binits{C.}},
+\oauthor{\bsnm{Mercatelli}, \binits{D.}}:
+The R Language: An Engine for Bioinformatics and Data Science
+(2022).
+doi:\doiurl{10.3390/life12050648}
+\end{botherref}
+\endbibitem
+
+%%% 10
+\bibitem{Mehare2023}
+\begin{bbook}
+\bauthor{\bsnm{Mehare}, \binits{H.B.}},
+\bauthor{\bsnm{Anilkumar}, \binits{J.P.}},
+\bauthor{\bsnm{Usmani}, \binits{N.A.}}:
+\bbtitle{The Python Programming Language},
+(\byear{2023}).
+doi:\doiurl{10.1007/978-3-031-22206-1_2}
+\end{bbook}
+\endbibitem
+
+%%% 11
+\bibitem{Szklarczyk2021}
+\begin{botherref}
+\oauthor{\bsnm{Szklarczyk}, \binits{D.}},
+\oauthor{\bsnm{Gable}, \binits{A.L.}},
+\oauthor{\bsnm{Nastou}, \binits{K.C.}},
+\oauthor{\bsnm{Lyon}, \binits{D.}},
+\oauthor{\bsnm{Kirsch}, \binits{R.}},
+\oauthor{\bsnm{Pyysalo}, \binits{S.}},
+\oauthor{\bsnm{Doncheva}, \binits{N.T.}},
+\oauthor{\bsnm{Legeay}, \binits{M.}},
+\oauthor{\bsnm{Fang}, \binits{T.}},
+\oauthor{\bsnm{Bork}, \binits{P.}},
+\oauthor{\bsnm{Jensen}, \binits{L.J.}},
+\oauthor{\bparticle{von} \bsnm{Mering}, \binits{C.}}:
+The string database in 2021: Customizable protein-protein networks, and
+  functional characterization of user-uploaded gene/measurement sets.
+Nucleic Acids Research
+\textbf{49}
+(2021).
+doi:\doiurl{10.1093/nar/gkaa1074}
+\end{botherref}
+\endbibitem
+
+%%% 12
+\bibitem{Csardi2006}
+\begin{botherref}
+\oauthor{\bsnm{Csardi}, \binits{G.}},
+\oauthor{\bsnm{Nepusz}, \binits{T.}}:
+The igraph software package for complex network research.
+InterJournal Complex Systems
+\textbf{Complex Sy}
+(2006)
+\end{botherref}
+\endbibitem
+
+%%% 13
+\bibitem{Snehkunj2022}
+\begin{botherref}
+\oauthor{\bsnm{Snehkunj}, \binits{R.}},
+\oauthor{\bsnm{Vachiyatwala}, \binits{K.}},
+\oauthor{\bsnm{Author}, \binits{C.}}:
+Data analysis using pandas library of python.
+Acta Scientific COMPUTER SCIENCES
+\textbf{4}
+(2022)
+\end{botherref}
+\endbibitem
+
+%%% 14
+\bibitem{Kalinka2011}
+\begin{botherref}
+\oauthor{\bsnm{Kalinka}, \binits{A.T.}}:
+The generation , visualization , and analysis of link communities in arbitrary
+  networks with the r package linkcomm.
+Molecular Cell
+(2011)
+\end{botherref}
+\endbibitem
+
+%%% 15
 \bibitem{Zahiri2023}
 \begin{botherref}
 \oauthor{\bsnm{Zahiri}, \binits{M.}},
@@ -174,7 +320,7 @@ doi:\doiurl{10.1007/s12652-021-03508-y}
 \end{botherref}
 \endbibitem
 
-%%% 9
+%%% 16
 \bibitem{Curtis2003}
 \begin{botherref}
 \oauthor{\bsnm{Curtis}, \binits{S.A.}}:
@@ -186,7 +332,7 @@ doi:\doiurl{10.1016/j.scico.2003.09.001}
 \end{botherref}
 \endbibitem
 
-%%% 10
+%%% 17
 \bibitem{Garza2019}
 \begin{botherref}
 \oauthor{\bsnm{Garza}, \binits{S.E.}},
@@ -197,7 +343,7 @@ doi:\doiurl{10.1016/j.physa.2019.122058}
 \end{botherref}
 \endbibitem
 
-%%% 11
+%%% 18
 \bibitem{Zhang2021}
 \begin{botherref}
 \oauthor{\bsnm{Zhang}, \binits{J.}},
@@ -209,6 +355,15 @@ Mathematical Problems in Engineering
 \textbf{2021}
 (2021).
 doi:\doiurl{10.1155/2021/1485592}
+\end{botherref}
+\endbibitem
+
+%%% 19
+\bibitem{hpojax}
+\begin{botherref}
+Human Phenotype Ontology (HPO) Browser.
+\url{https://hpo.jax.org/app/}.
+Accessed: Insert your access date here
 \end{botherref}
 \endbibitem
 
@@ -333,6 +488,147 @@ doi:\doiurl{10.1155/2021/1485592}
 </bibl>
 
 <bibl id="B8">
+  <title><p>The human phenotype ontology in 2021</p></title>
+  <aug>
+    <au><snm>Köhler</snm><fnm>S</fnm></au>
+    <au><snm>Gargano</snm><fnm>M</fnm></au>
+    <au><snm>Matentzoglu</snm><fnm>N</fnm></au>
+    <au><snm>Carmody</snm><fnm>LC</fnm></au>
+    <au><snm>Lewis Smith</snm><fnm>D</fnm></au>
+    <au><snm>Vasilevsky</snm><fnm>NA</fnm></au>
+    <au><snm>Danis</snm><fnm>D</fnm></au>
+    <au><snm>Balagura</snm><fnm>G</fnm></au>
+    <au><snm>Baynam</snm><fnm>G</fnm></au>
+    <au><snm>Brower</snm><fnm>AM</fnm></au>
+    <au><snm>Callahan</snm><fnm>TJ</fnm></au>
+    <au><snm>Chute</snm><fnm>CG</fnm></au>
+    <au><snm>Est</snm><fnm>JL</fnm></au>
+    <au><snm>Galer</snm><fnm>PD</fnm></au>
+    <au><snm>Ganesan</snm><fnm>S</fnm></au>
+    <au><snm>Griese</snm><fnm>M</fnm></au>
+    <au><snm>Haimel</snm><fnm>M</fnm></au>
+    <au><snm>Pazmandi</snm><fnm>J</fnm></au>
+    <au><snm>Hanauer</snm><fnm>M</fnm></au>
+    <au><snm>Harris</snm><fnm>NL</fnm></au>
+    <au><snm>Hartnett</snm><fnm>MJ</fnm></au>
+    <au><snm>Hastreiter</snm><fnm>M</fnm></au>
+    <au><snm>Hauck</snm><fnm>F</fnm></au>
+    <au><snm>He</snm><fnm>Y</fnm></au>
+    <au><snm>Jeske</snm><fnm>T</fnm></au>
+    <au><snm>Kearney</snm><fnm>H</fnm></au>
+    <au><snm>Kindle</snm><fnm>G</fnm></au>
+    <au><snm>Klein</snm><fnm>C</fnm></au>
+    <au><snm>Knoflach</snm><fnm>K</fnm></au>
+    <au><snm>Krause</snm><fnm>R</fnm></au>
+    <au><snm>Lagorce</snm><fnm>D</fnm></au>
+    <au><snm>McMurry</snm><fnm>JA</fnm></au>
+    <au><snm>Miller</snm><fnm>JA</fnm></au>
+    <au><snm>Munoz Torres</snm><fnm>MC</fnm></au>
+    <au><snm>Peters</snm><fnm>RL</fnm></au>
+    <au><snm>Rapp</snm><fnm>CK</fnm></au>
+    <au><snm>Rath</snm><fnm>AM</fnm></au>
+    <au><snm>Rind</snm><fnm>SA</fnm></au>
+    <au><snm>Rosenberg</snm><fnm>AZ</fnm></au>
+    <au><snm>Segal</snm><fnm>MM</fnm></au>
+    <au><snm>Seidel</snm><fnm>MG</fnm></au>
+    <au><snm>Smedley</snm><fnm>D</fnm></au>
+    <au><snm>Talmy</snm><fnm>T</fnm></au>
+    <au><snm>Thomas</snm><fnm>Y</fnm></au>
+    <au><snm>Wiafe</snm><fnm>SA</fnm></au>
+    <au><snm>Xian</snm><fnm>J</fnm></au>
+    <au><snm>Yüksel</snm><fnm>Z</fnm></au>
+    <au><snm>Helbig</snm><fnm>I</fnm></au>
+    <au><snm>Mungall</snm><fnm>CJ</fnm></au>
+    <au><snm>Haendel</snm><fnm>MA</fnm></au>
+    <au><snm>Robinson</snm><fnm>PN</fnm></au>
+  </aug>
+  <source>Nucleic Acids Research</source>
+  <pubdate>2021</pubdate>
+  <volume>49</volume>
+</bibl>
+
+<bibl id="B9">
+  <title><p>The R Language: An Engine for Bioinformatics and Data
+  Science</p></title>
+  <aug>
+    <au><snm>Giorgi</snm><fnm>FM</fnm></au>
+    <au><snm>Ceraolo</snm><fnm>C</fnm></au>
+    <au><snm>Mercatelli</snm><fnm>D</fnm></au>
+  </aug>
+  <source>Life</source>
+  <pubdate>2022</pubdate>
+  <volume>12</volume>
+</bibl>
+
+<bibl id="B10">
+  <title><p>The Python Programming Language</p></title>
+  <aug>
+    <au><snm>Mehare</snm><fnm>HB</fnm></au>
+    <au><snm>Anilkumar</snm><fnm>JP</fnm></au>
+    <au><snm>Usmani</snm><fnm>NA</fnm></au>
+  </aug>
+  <source>A Guide to Applied Machine Learning for Biologists</source>
+  <pubdate>2023</pubdate>
+</bibl>
+
+<bibl id="B11">
+  <title><p>The STRING database in 2021: Customizable protein-protein networks,
+  and functional characterization of user-uploaded gene/measurement
+  sets</p></title>
+  <aug>
+    <au><snm>Szklarczyk</snm><fnm>D</fnm></au>
+    <au><snm>Gable</snm><fnm>AL</fnm></au>
+    <au><snm>Nastou</snm><fnm>KC</fnm></au>
+    <au><snm>Lyon</snm><fnm>D</fnm></au>
+    <au><snm>Kirsch</snm><fnm>R</fnm></au>
+    <au><snm>Pyysalo</snm><fnm>S</fnm></au>
+    <au><snm>Doncheva</snm><fnm>NT</fnm></au>
+    <au><snm>Legeay</snm><fnm>M</fnm></au>
+    <au><snm>Fang</snm><fnm>T</fnm></au>
+    <au><snm>Bork</snm><fnm>P</fnm></au>
+    <au><snm>Jensen</snm><fnm>LJ</fnm></au>
+    <au><snm>Mering</snm><fnm>C</fnm></au>
+  </aug>
+  <source>Nucleic Acids Research</source>
+  <pubdate>2021</pubdate>
+  <volume>49</volume>
+</bibl>
+
+<bibl id="B12">
+  <title><p>The igraph software package for complex network
+  research</p></title>
+  <aug>
+    <au><snm>Csardi</snm><fnm>G</fnm></au>
+    <au><snm>Nepusz</snm><fnm>T</fnm></au>
+  </aug>
+  <source>InterJournal Complex Systems</source>
+  <pubdate>2006</pubdate>
+  <volume>Complex Sy</volume>
+</bibl>
+
+<bibl id="B13">
+  <title><p>Data Analysis Using Pandas Library of Python</p></title>
+  <aug>
+    <au><snm>Snehkunj</snm><fnm>R</fnm></au>
+    <au><snm>Vachiyatwala</snm><fnm>K</fnm></au>
+    <au><snm>Author</snm><fnm>C</fnm></au>
+  </aug>
+  <source>Acta Scientific COMPUTER SCIENCES</source>
+  <pubdate>2022</pubdate>
+  <volume>4</volume>
+</bibl>
+
+<bibl id="B14">
+  <title><p>The generation , visualization , and analysis of link communities
+  in arbitrary networks with the R package linkcomm</p></title>
+  <aug>
+    <au><snm>Kalinka</snm><fnm>AT</fnm></au>
+  </aug>
+  <source>Molecular Cell</source>
+  <pubdate>2011</pubdate>
+</bibl>
+
+<bibl id="B15">
   <title><p>An improved Girvan–Newman community detection algorithm using
   trust-based centrality</p></title>
   <aug>
@@ -345,7 +641,7 @@ doi:\doiurl{10.1155/2021/1485592}
   <volume>14</volume>
 </bibl>
 
-<bibl id="B9">
+<bibl id="B16">
   <title><p>The classification of greedy algorithms</p></title>
   <aug>
     <au><snm>Curtis</snm><fnm>S. A.</fnm></au>
@@ -355,7 +651,7 @@ doi:\doiurl{10.1155/2021/1485592}
   <volume>49</volume>
 </bibl>
 
-<bibl id="B10">
+<bibl id="B17">
   <title><p>Community detection with the Label Propagation Algorithm: A
   survey</p></title>
   <aug>
@@ -367,7 +663,7 @@ doi:\doiurl{10.1155/2021/1485592}
   <volume>534</volume>
 </bibl>
 
-<bibl id="B11">
+<bibl id="B18">
   <title><p>An Improved Louvain Algorithm for Community Detection</p></title>
   <aug>
     <au><snm>Zhang</snm><fnm>J</fnm></au>
@@ -378,6 +674,12 @@ doi:\doiurl{10.1155/2021/1485592}
   <source>Mathematical Problems in Engineering</source>
   <pubdate>2021</pubdate>
   <volume>2021</volume>
+</bibl>
+
+<bibl id="B19">
+  <title><p>Human Phenotype Ontology (HPO) Browser</p></title>
+  <source>\url{https://hpo.jax.org/app/}</source>
+  <note>Accessed: Insert your access date here</note>
 </bibl>
 
 </refgrp>

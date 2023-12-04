@@ -106,10 +106,23 @@ Para estudiar mejor a qué comunidad pertenece cada nodo, visualizamos el result
 \vspace{3pt}
 \subsection{Interacción de genes de interés}
 
-En tercer lugar, estudiamos la interacción de nuestros \textbf{genes de interés} especificados anteriormente: \textit{TP53}, \textit{HRAS}, \textit{AKT1}, \textit{SDHB}, \textit{SDHD}. Para ellos creamos una función (función $encontrar_vecinos_interesantes()$, en el fichero $biologiasistemas_igraph.R$ en el repositorio GitHub del proyecto) que nos devolvía una tabla con los vecinos de cada uno de estos genes para saber si entre ellos estaban relacionados.
+En tercer lugar, estudiamos la interacción de nuestros \textbf{genes de interés} especificados anteriormente: \textit{TP53}, \textit{HRAS}, \textit{AKT1}, \textit{SDHB}, \textit{SDHD}. Para ellos creamos una función (función $encontrar\_vecinos\_interesantes()$, en el fichero $biologiasistemas\_igraph.R$ en el repositorio GitHub del proyecto) que nos devolvía una tabla con los vecinos de cada uno de estos genes para saber si entre ellos estaban relacionados.
 
 \vspace{3pt}
 
-En último lugar, tras estudiar la detección de comunidades optamos por realizar un enriquecimiento funcional para la comunidad identificada donde se encuentren nuestros genes de interés. Para ello, hemos guardado los genes que conforman la comunidad donde se encuentran los genes de interés en un archivo y hemos realizado un enriquecimiento funcional de estos genes filtrando para quedarnos con las entradas de categoría HPO \cite{hpojax} (para relacionar estos genes con fenotipos patológicos).  Estos datos se guardan en un archivo de extensión csv y hemos consultado las entradas de este buscando por palabras clave (papilloma, genital, renal, carcinoma, ovarian, ovary, ovaries, uterine). 
+\subsection{Enriquecimiento funcional de la comunidad de interés.}
+
+Tras estudiar la detección de comunidades optamos por realizar un enriquecimiento funcional de la comunidad en la que se encuentran nuestros genes de interés. Para ello, se busca la comunidad en la que se encuentran estos genes, se identifica esta y se guardan los genes que la conforman en el entorno de R. Esto lo hemos hecho con el comando \textit{ nodos\_genes\_interes \textless\ - V(net) \$name \%in\% genes\_interes} donde \textit{net} es nuestro grafo principal y $genes\_interes$ es un vector donde se encuentran definidos los genes de interés del estudio. Este comando encuentra los índices de los nodos que representan los genes de interés nuestro de nuestro grafo. Seguimos, obteniendo el índice de la comunidad que contiene estos genes de interés con el comando \textit{ cluster\_containing\_genes \textless\ - mermbership(cfg)[nodos\_genes\_interes]} donde $cfg$ es la variable donde se encuentran las diferentes comunidades que hemos identificado en nuestro grafo principal. Tras esto, con el comando \textit{genes\_cluster \textless\ - V(net)\$name[membership(cfg)==cluster\_containing\_genes]} guardamos todos los genes que conforman esta comunidad en una variable. Esta variable la guardamos en un fichero de texto con la función $write.table()$.
+
+\vspace{3pt}
+
+Una vez que tenemos el fichero de texto con los genes que conforman la comunidad de interés procedemos a realizar un enriquecimiento funcional. Para ello, en un nuevo script de Python que hemos llamado \textit{enriquecimiento\_cluster.py}. Comenzamos importando las librería necesarias y construyendo la URL para realizar una solicitud a la API de STRINGDB. Definimos la categoría funcional de interés, en nuestro caso HPO (para relacionar los genes con fenotipos patológicos), definimos la especie de nuestros genes, en este caso 9606 (referente a Homo Sapiens) y el archivo de genes donde se enucnetran nuestra comunidad de interés. Seguidamente recogemos los parámetros para el análisis funcional ya definidos en una solicitud a la API de StringDB. Creamos un dataframe con las columnas $Term, Preferred Name, Category, Description$ que muestran el término HPO, el nombre de los genes, la categoría funcional (en este caso, HPO) y una descripción del fenotipo patológico asociado.
+Este dataset se guarda en un archivo csv con la función \textit{.to\_csv()}.
+
+\vspace{3pt}
+
+\subsection{Consulta de la relación entre genes asociados y fenotipos patológicos.}
+
+Por último, hemos consultado manualmente el archivo csv creado con el dataframe anteriormente descrito y hemos identificado relaciones de genes asociados con fenotipos patológicos (estas consultas han sido filtradas por palabras clave como son: papiloma, genitales, renal, carcinoma, ovario y derivados, útero y derivados).
 
 

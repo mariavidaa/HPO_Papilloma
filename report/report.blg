@@ -27,48 +27,49 @@ Repeated entry---line 121 of file bibliography.bib
 I'm skipping whatever remains of this entry
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
+Warning--to sort, need author or key in hpojax
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
-You've used 11 entries,
+You've used 19 entries,
             7128 wiz_defined-function locations,
-            1210 strings with 11832 characters,
-and the built_in function-call counts, 57771 in all, are:
-= -- 7059
-> -- 306
-< -- 139
-+ -- 1316
-- -- 121
-* -- 4629
-:= -- 11896
-add.period$ -- 21
-call.type$ -- 11
-change.case$ -- 100
-chr.to.int$ -- 215
-cite$ -- 11
-duplicate$ -- 1005
-empty$ -- 3574
-format.name$ -- 410
-if$ -- 12485
+            1256 strings with 14305 characters,
+and the built_in function-call counts, 124086 in all, are:
+= -- 14812
+> -- 666
+< -- 241
++ -- 2423
+- -- 295
+* -- 10708
+:= -- 25554
+add.period$ -- 32
+call.type$ -- 19
+change.case$ -- 219
+chr.to.int$ -- 235
+cite$ -- 21
+duplicate$ -- 2042
+empty$ -- 8208
+format.name$ -- 1115
+if$ -- 26170
 int.to.chr$ -- 1
-int.to.str$ -- 27
-missing$ -- 392
-newline$ -- 366
-num.names$ -- 55
-pop$ -- 500
+int.to.str$ -- 50
+missing$ -- 769
+newline$ -- 661
+num.names$ -- 90
+pop$ -- 1090
 preamble$ -- 1
-purify$ -- 48
-quote$ -- 22
-skip$ -- 3104
+purify$ -- 86
+quote$ -- 38
+skip$ -- 6316
 stack$ -- 0
-substring$ -- 8346
-swap$ -- 244
-text.length$ -- 164
+substring$ -- 19191
+swap$ -- 441
+text.length$ -- 275
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 348
-warning$ -- 0
-while$ -- 361
+type$ -- 565
+warning$ -- 1
+while$ -- 729
 width$ -- 0
-write$ -- 494
+write$ -- 1022
 (There was 1 error message)
