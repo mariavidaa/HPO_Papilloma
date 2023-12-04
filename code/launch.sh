@@ -1,7 +1,14 @@
 #!/bin/bash
 
-# Ejecutar el script Python desde la carpeta code
-./biologiasistemas_flujo.py
+echo "Instalamos dependencias"
+# Script para instalar dependencias
+./setup.sh
 
-# Mover los resultados a la carpeta results
-mv output_file.txt ../results/
+# Ejecutar el script de Python
+python3 biologiasistemas_flujo.py
+
+# Ejecutar el archivo de RMarkdown
+Rscript -e 'rmarkdown::render("biologiasistemas_igraph.Rmd")'
+
+# Ejecutar el script de Python
+python3 enriquecimiento_cluster.py
