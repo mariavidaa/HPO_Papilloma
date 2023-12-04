@@ -1,143 +1,77 @@
----
-title: "biologiasistemas_igrapgh"
-author: "Maria Vida Montañez y María José Hidalgo Rodríguez"
-date: "2023-11-18"
-output: html_document
----
-
-## Propiedades de la red
-
-```{r}
 # Importamos libreria
 library(igraph)
 # Cargamos los datos
 genes <- read.table("../results/genes_igraph.txt", sep = '\t', header = FALSE, stringsAsFactors = FALSE)
 #Creamos un nuevo grafo no dirigido a partir de esta información
 net <- graph_from_data_frame(genes, directed=F)
-```
 
-```{r}
-# Mostramos la red
-par(cex = 0.4)
-plot(net)
-```
-
-```{r}
 # Comprobamos que no hay ningun nodo sin conexión.
 is.connected(net)
-```
 
-```{r}
 # Comprobamos que no es dirigido
 is.directed(net)
-```
 
-```{r}
 # Grado centralidad: numero de conexiones de cada gen
 degree_centrality <- degree(net)
 degree_centrality
-```
 
-```{r}
 # Centralidad de cercanía: Mide la distancia promedio entre un nodo y todos los demás nodos
 closeness_centrality <- closeness(net)
 closeness_centrality
-```
 
-```{r}
 # Conectividad:Mide la fortaleza de la conexión en el grafo.
 connectivity <- edge_density(net)
 connectivity
-```
 
-## Identificacion de comunidades
-
-```{r}
 #  Detección de comunidades mediante in_betweeness.
 community <- cluster_edge_betweenness(net)
 dendPlot(community, mode="hclust")
 # Mostramos el grafo con las clusters detectados
 par(cex = 0.4)
-plot(community, net)
 # Guardamos la imagen en la carpeta results
 dev.copy(png, filename = "../results/clustering_in_betweeness.png", width = 800, height = 600)  
 dev.off()
-```
 
-Metodo de Girvan-Newman. Este método, basado en la centralidad de intermediación (betweenness), busca identificar comunidades cortando enlaces que conectan las partes más densas de la red. Hay nodos que no pertenecen a ninguna comunidad. Esto puede deberse a la forma en que el algoritmo de betweenness identifica comunidades. Puede detectar comunidades basándose en la centralidad de intermediación de los nodos, y algunos nodos pueden no estar claramente vinculados a una comunidad en función de esta medida.
-
-```{r}
-# Detección de comunidades mediante optimización voraz. Este enfoque busca la modularidad de la red
 cfg <- cluster_fast_greedy(as.undirected(net))
 par(cex = 0.4)
-plot(cfg, as.undirected(net))
 # Guardamos la imagen en la carpeta results
 dev.copy(png, filename = "../results/clustering_fast_greedy.png", width = 800, height = 600)  
 dev.off()
-```
 
-Podemos ver que con este tipo de metodo todos los nodos pertenecen a alguna comunidad. El algoritmo de optimización voraz busca maximizar la modularidad de la red, dividiéndola en comunidades más densamente conectadas internamente.
-
-```{r}
 # Pinta el grafo de manera que los nodos que lo forman compartan un mismo color si pertenecen a la misma comunidad.
 V(net)$community <- cfg$membership
 colrs <- adjustcolor( c("gray50", "tomato", "gold", "yellowgreen", "blue"), alpha=.6)
 par(cex = 0.4)
-plot(net, vertex.color=colrs[V(net)$community])
 # Guardamos la imagen en la carpeta results
 dev.copy(png, filename = "../results/clustering_coloreado.png", width = 800, height = 600)  
 dev.off()
-```
 
-```{r}
 # Detección de comunidades mediante propagación de etiquetas.
 clp <- cluster_label_prop(net)
 par(cex = 0.4)
-plot(clp, net)
 # Guardamos la imagen en la carpeta results
 dev.copy(png, filename = "../results/clustering_label_prop.png", width = 800, height = 600)  
 dev.off()
-```
 
-En este caso solo ha identificado a dos comunidades. La propagación de etiquetas es un enfoque basado en la difusión de información a través de la red. Puede ocurrir que esta técnica agrupe nodos que están fuertemente conectados, pero puede no ser tan sensible a las sutilezas de la modularidad como otros algoritmos.
-
-```{r}
 community_louvain <- cluster_louvain(net)
 par(cex = 0.4)
-plot(community_louvain, net)
 # Guardamos la imagen en la carpeta results
 dev.copy(png, filename = "../results/clustering_louvain.png", width = 800, height = 600)  
 dev.off()
-```
 
-El algoritmo de Louvain es muy popular y eficiente. Este método busca maximizar la modularidad de la red y es conocido por su velocidad en comparación con algunos otros algoritmos. En este caso hemos obtenido 4 comunidades en vez de 5.
-
-```{r}
 library(linkcomm)
 
 lg <- swiss[,3:4]
 lc <- getLinkCommunities(genes)
 
-
-```
-
-En las graficas anteriores vemos como las comunidades se solapaban, lo que no podia indicar que hay nodos que pueden pertenecer a mas de una comunidad. Para estudiar este hecho vamos a hacer uso de Link Communites.
-
-```{r}
 # Visualiza las link communities
 options(repr.plot.width=9, repr.plot.height=9)
-par(cex = 0.5)
+par(cex = 0.5)# Visualiza las link communities
 plot(lc, type = "graph", layout = "spencer.circle")
 # Guardamos la imagen en la carpeta results
 dev.copy(png, filename = "../results/clustering_link_communities.png", width = 800, height = 600)  
 dev.off()
-```
 
-## Estudio genes de interes
-
-Comparamos las relaciones establecidas con strindb en funcion de las enfermedades con la tabla que obtenemos a continuacion.
-
-```{r}
 # Genes de interés
 genes_interes <- c("TP53", "HRAS", "AKT1", "SDHB", "SDHD")
 
@@ -158,10 +92,7 @@ tabla_genes$Vecinos_Interesantes <- sapply(genes_interes, function(gen) {
 
 # Imprimir la tabla
 print(tabla_genes)
-```
-## Guardamos comunidad importante
 
-```{r}
 # Identifica los genes de interés
 genes_interes <- c("AKT1", "TP53", "SDHD", "SDHB", "HRAS")
 
@@ -174,22 +105,13 @@ cluster_containing_genes <- membership(cfg)[nodos_genes_interes]
 # Guarda los genes de ese cluster en un archivo de texto
 genes_cluster <- V(net)$name[membership(cfg) == cluster_containing_genes]
 
-genes_cluster
-
-
-```
-
-```{r}
 # Ruta y nombre del archivo de texto
 ruta_archivo <- "../results/genes_cluster.txt"
 
 # Guardar la variable genes_cluster en un archivo de texto
 write.table(genes_cluster, file = ruta_archivo, quote = FALSE, col.names = FALSE, row.names = FALSE)
 
-
 # Imprimir mensaje de confirmación
 cat("Los genes del cluster se han guardado en el archivo:", ruta_archivo, "\n")
-
-```
 
 
