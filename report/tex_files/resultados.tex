@@ -1,6 +1,30 @@
 
 \section{Resultados}
 
+\subsection{Red de interacción entre genes}
+
+Se identificaron un total de 51 genes asociados al fenotipo \textbf{Papilloma} y obtuvimos una representación visual de la red de interacción entre los genes.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\linewidth]{red_inicial}
+	\caption{Red formada por los 51 genes relacionados con el fenotipo \textbf{Papilloma}}
+	\label{fig:grado_centralidad}
+\end{figure}
+
+\subsection{Análisis de enriquecimiento funcional}
+
+Se realizó un análisis de enriquecimiento funcional destacando las categorías \textbf{Process} y \textbf{KEGG}, obteniendo relaciones entre algunos grupos de genes con problemas del sistema inmune, carcinoma y las adipoquinas.
+
+Los términos y categorías relacionados con enfermedades como \textbf{cervix}, \textbf{ovarian}, \textbf{HPV}, \textbf{herpes}, \textbf{papillomavirus}, \textbf{costellos} y \textbf{cowden} fueron encontrados en el análisis de enriquecimiento funcional, indicando posibles vínculos entre estos términos y los genes asociados al fenotipo estudiado.
+
+Se realizaron búsquedas específicas de genes clave como \textbf{TP53}, \textbf{AKT1}, \textbf{SDHB}, \textbf{SDHD}, \textbf{HRAS} dentro de las categorías significativas. Estos genes podrían tener una importancia particular en relación con el fenotipo de interés, evidenciando su posible relevancia funcional.
+
+\subsection{Descarga y procesamiento de la red de interacción}
+
+Se descargó la red de interacción en formato TSV. El archivo descargado se procesó para dar como resultado un archivo de texto \textbf{genes_igraph.txt} formado por dos columnas de nombres de genes, en las que cada fila representa una relación entre dos genes.
+
+
+
 \subsection{Propiedades de la red y detección de comunidades}
 
 En nuestra red vimos que todos los nodos estaban conectados entre sí y que se trataba de un grafo no dirigido.
