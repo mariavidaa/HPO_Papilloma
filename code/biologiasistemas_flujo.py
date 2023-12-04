@@ -31,17 +31,8 @@ def buscar_genes_por_fenotipo(fenotipo):
 fenotipo_buscar = "HP:0012740"  # Código HPO para Papilloma
 genes_asociados_papiloma = buscar_genes_por_fenotipo(fenotipo_buscar)
 
-if genes_asociados_papiloma:
-    print(f"Genes asociados a '{fenotipo_buscar}':")
-    for gen in genes_asociados_papiloma:
-        print(gen)
-else:
-    print("No se encontraron genes asociados a este fenotipo en la HPO.")
+print("Número de genes asociados al fenotipo Papilloma: ",len(genes_asociados_papiloma))
 
-len(genes_asociados_papiloma)
-
-for gen in genes_asociados_papiloma:
-    print(gen['geneSymbol'])
 
 
 ## Conexion con stringDB
@@ -59,20 +50,12 @@ with open('img.png', 'wb') as out_file:
     shutil.copyfileobj(response.raw, out_file)
 del response
 
-Image(filename='img.png')
-
-
-
 
 # Obtener los símbolos de genes de la lista de genes obtenida anteriormente
 genes = [gen['geneSymbol'] for gen in genes_asociados_papiloma]
 
-# Llamar a la función get_interaction_partners() con los genes obtenidos
-interaction_df = stringdb.get_interaction_partners(genes)
+# Llamar a la función get_enrichment() con los genes obtenidos
 enrichment_df = stringdb.get_enrichment(genes)
-
-# Mostrar el DataFrame resultante
-print(enrichment_df)
 
 # Enriquecimiento por categorias (nuestro fdr (p-value ajustado) es tan pequeño que no vamos a considerarlo)
 # Filtramos por categorias 'Process' y 'KEGG'
