@@ -6,6 +6,6 @@ if (!require("igraph")) {
 }
 
 # enrichR
-if (!require("enrichR")) {
-    install.packages("enrichR")
+if (!require("linkcomm")) {
+    install.packages("linkcomm")
 }

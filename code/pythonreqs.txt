@@ -1,3 +1,4 @@
 pandas==2.1.2
 stringdb==0.1.5
 requests==2.31.0
+json==3.12.0
