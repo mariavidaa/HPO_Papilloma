@@ -4,12 +4,7 @@
 \subsection{Red de interacción entre genes}
 
 Se identificaron un total de 51 genes asociados al fenotipo \textbf{Papilloma} y obtuvimos una representación visual de la red de interacción entre los genes.
-\begin{figure}
-	\centering
-	\includegraphics[width=0.8\linewidth]{figures/cluster_etiq_louvain}
-	\caption{Red formada por los 51 genes relacionados con el fenotipo \textbf{Papilloma}}
-	\label{fig:grado_centralidad}
-\end{figure}
+
 
 \subsection{Análisis de enriquecimiento funcional}
 
@@ -17,7 +12,7 @@ Se realizó un análisis de enriquecimiento funcional destacando las categorías
 
 Los términos y categorías relacionados con enfermedades como \textbf{cervix}, \textbf{ovarian}, \textbf{HPV}, \textbf{herpes}, \textbf{papillomavirus}, \textbf{costellos} y \textbf{cowden} fueron encontrados en el análisis de enriquecimiento funcional, indicando posibles vínculos entre estos términos y los genes asociados al fenotipo estudiado.
 
-Se realizaron búsquedas específicas de genes clave como \textbf{TP53}, \textbf{AKT1}, \textbf{SDHB}, \textbf{SDHD}, \textbf{HRAS} dentro de las categorías significativas. Estos genes podrían tener una importancia particular en relación con el fenotipo de interés, evidenciando su posible relevancia funcional.
+Se realizaron búsquedas específicas de genes clave como \textit{TP53}, \textit{AKT1}, \textit{SDHB}, \textit{SDHD}, \textit{HRAS} dentro de las categorías significativas. Estos genes podrían tener una importancia particular en relación con el fenotipo de interés, evidenciando su posible relevancia funcional.
 
 \subsection{Descarga y procesamiento de la red de interacción}
 
@@ -31,13 +26,117 @@ En nuestra red vimos que todos los nodos estaban conectados entre sí y que se t
 
 \vspace{3pt}
 
-Obtuvimos una tabla con el \textbf{grado de centralidad} de cada gen. Pudimos observar como el gen de interés TP53 es el que presentaba un mayor grado de centralidad y por tanto más relaciones con otros genes. 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.8\linewidth]{figures/grado_centralidad}
-	\caption{Descripción de la figura.}
-	\label{fig:grado_centralidad}
-\end{figure}
+Obtuvimos una tabla con el \textbf{grado de centralidad} de cada gen (tabla \ref{tab:gradoCentralidad}). Pudimos observar como el gen de interés \textit{TP53} es el que presentaba un mayor grado de centralidad y por tanto más relaciones con otros genes. 
+
+
+
+	\begin{table}[h]
+		\begin{minipage}{0.5\textwidth}
+			\centering
+			\begin{tabular}{|c|c|}
+				\hline
+				Gen & Grado Centralidad\\
+				\hline
+				CD4 & 15\\
+				\hline
+				CD79A & 13 \\
+				\hline
+				SPL1 & 11 \\
+				\hline
+				DDB2 & 9 \\
+				\hline
+				LRRC8A & 4 \\
+				\hline
+				FLT4 & 5 \\
+				\hline
+				TCF3 & 10 \\
+				\hline
+				IL7 & 10 \\
+				\hline
+				PIK3CA & 11 \\
+				\hline
+				MSH3 & 11 \\
+				\hline
+				TP53 & 30 \\
+				\hline
+				XPC & 9 \\
+				\hline
+				ERCC3 & 9 \\
+				\hline
+				ERCC4 & 9 \\
+				\hline
+				USF3 & 1 \\
+				\hline
+				TMC8 & 5 \\
+				\hline
+				IGLL1 & 7 \\
+				\hline
+				CARMIL2 & 1 \\
+				\hline
+				SEC23B & 2 \\
+				\hline
+				GATA2 & 10 \\
+				\hline
+				SASH3 & 3 \\
+				\hline
+			\end{tabular}
+			\vspace{3pt}
+			\caption{Grado Centralidad}
+			\label{tab:gradoCentralidad}
+		\end{minipage}%
+		\begin{minipage}{0.5\textwidth}
+			\centering
+			\begin{tabular}{|c|c|}
+				\hline
+				Gen & Grado Centralidad \\
+				\hline
+				SDHC & 5\\
+				\hline
+				NRAS & 8 \\
+				\hline
+				PTEN & 15 \\
+				\hline
+				STK4 & 2 \\
+				\hline
+				XPA & 9 \\
+				\hline
+				SDHB & 7 \\
+				\hline
+				SDHD & 5 \\
+				\hline
+				TPP2 & 2 \\
+				\hline
+				DCLRE1C & 10 \\
+				\hline
+				RHOH & 8 \\
+				\hline
+				ERCC2 & 8 \\
+				\hline
+				CD79B & 11 \\
+				\hline
+				CXCR4 & 12 \\
+				\hline
+				HRAS & 9 \\
+				\hline
+				PIK3R1 & 12 \\
+				\hline
+				AKT1 & 20 \\
+				\hline
+				TMC6 & 4 \\
+				\hline
+				IKBKG & 4 \\
+				\hline
+				DOCK8 & 7 \\
+				\hline
+				ERCC5 & 9 \\
+				\hline
+			\end{tabular}
+			
+			
+		\end{minipage}
+	\end{table}
+	
+
 
 
 \vspace{3pt}
@@ -46,45 +145,55 @@ En cuanto al \textbf{grado de conectividad} obtuvimos un valor del 19\%, el cual
 
 \vspace{3pt}
 
-Empleamos distintos algoritmos para \textbf{detectar comunidades}. En el caso del método de Girvan-Newman había nodos que no pertenecían a ninguna comunidad. Esto podía deberse a la forma en que el algoritmo de betweenness identifica comunidades. Puede detectar comunidades basándose en la centralidad de intermediación de los nodos, y algunos nodos pueden no estar claramente vinculados a una comunidad en función de esta medida.
+Empleamos distintos algoritmos para \textbf{detectar comunidades}. En el caso del método de Girvan-Newman había nodos que no pertenecían a ninguna comunidad (Fig. \ref{fig:algoritmos}-A). Esto podía deberse a la forma en que el algoritmo de betweenness identifica comunidades. Puede detectar comunidades basándose en la centralidad de intermediación de los nodos, y algunos nodos pueden no estar claramente vinculados a una comunidad en función de esta medida.
 
 \vspace{3pt}
 
-Con el algoritmo voraz todos los nodos pertenecían a alguna comunidad. al igual que con el algoritmo de propagación de etiquetas. Sin embargo, en este último obtuvimos tan solo 3 comunidades por lo que la clusterización es mínima.  Con la aplicación del método de Louvain también resultaban menos comunidades que con el algoritmo voraz. Observamos 4 comunidades. 
+Con el algoritmo voraz vimos que nuestros genes de interés se encontraban en el mismo cluster de color amarillo (\textit{TP53}, \textit{AKT1}, \textit{SDHB}, \textit{SDHD}, \textit{HRAS}). Además, todos los nodos pertenecían a alguna comunidad (Fig. \ref{fig:algoritmos}-B), al igual que con el algoritmo de propagación de etiquetas (Fig. \ref{fig:algoritmos}-C). Sin embargo, en este último obtuvimos tan solo 3 comunidades por lo que la clusterización es mínima.  Con la aplicación del método de Louvain también resultaban menos comunidades que con el algoritmo voraz. Observamos 4 comunidades (Fig. \ref{fig:algoritmos}-D). 
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.8\linewidth]{cluster_GN_voraz}
-	\caption{Descripción de la figura.}
-	\label{fig:cluster_GN_voraz}
+	\includegraphics[width=0.98\linewidth]{figures/algoritmos}
+	\captionsetup{labelformat=empty}
+	\caption{Resultado de la aplicación de distintos algoritmos de clusterización a la red. Figura A) algoritmo de Girvan-Newman. Figura B) algoritmo voraz. Figura C) método de propagación de etiquetas. FIgura D) algoritmo de Louvain}
+	\label{fig:algoritmos}
 \end{figure} 
 
-\begin{figure}
-	\centering
-	\includegraphics[width=0.8\linewidth]{cluster_etiq_louvain}
-	\caption{Descripción de la figura.}
-	\label{fig:cluster_etiq_louvain}
-\end{figure}
 
-Los algoritmos anteriores tenían la desventaja de que no reflejaban con exactitud la posibilidad de que un gen perteneciera a más de una comunidad. Para estudiar esto hicimos uso de \textbf{Link Communities}, y obtuvimos una gráfica donde cada gen era representado por un diagrama de sectores. Observamos que la mayoría de los genes pertenecen a más de una comunidad. Al centrarnos en nuestros genes de interés detectamos que el gen \textbf{TP53} tenía relación con 4 clusters distintos mientras que los otros genes de interés, SDHB, SDHb,HRAS, AKT1 se encontraban en una comunidad más diferenciada de color rosa. 
+
+Los algoritmos anteriores tenían la desventaja de que no reflejaban con exactitud la posibilidad de que un gen perteneciera a más de una comunidad. Para estudiar esto hicimos uso de \textbf{Link Communities}, y obtuvimos una gráfica donde cada gen era representado por un diagrama de sectores (Fig. \ref{fig:link}). Observamos que la mayoría de los genes pertenecen a más de una comunidad. Al centrarnos en nuestros genes de interés detectamos que el gen \textit{TP53} tenía relación con 4 clusters distintos mientras que los otros genes de interés, \textit{SDHB}, \textit{SDHb},\textit{HRAS}, \textit{AKT1} se encontraban en una comunidad más diferenciada de color rosa. 
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.8\linewidth]{link}
-	\caption{Descripción de la figura.}
+	\includegraphics[width=0.8\linewidth]{figures/link}
+	\caption{Resultado de la aplicación de detección de comunidades mediante link communities.}
 	\label{fig:link}
 \end{figure}
 
 
 
-Para el \textbf{estudio genes de interés} obtuvimos una tabla con dos columnas, el gen en concreto y sus genes vecinos. Observamos que todos los genes estaban relacionados entre sí menos el caso de TP53 y SDHD. 
+Para el \textbf{estudio genes de interés} obtuvimos la tabla \ref{tab:genesinteres} con el gen en concreto y sus genes vecinos. Observamos que todos los genes estaban relacionados entre sí menos el caso de \textit{TP53} y \textit{SDHD}. 
 
-\begin{figure}
+\begin{table}[h]
 	\centering
-	\includegraphics[width=0.8\linewidth]{gen_interes}
-	\caption{Descripción de la figura.}
-	\label{fig:gen_interes}
-\end{figure}
+	\caption{Genes de interes y genes relacionados}
+	\begin{tabular}{|c|c|}
+		\hline
+		\textbf{Genes} & \textbf{Genes interes} \\
+		\hline
+		TP53 & SDHB,HRAS,AKT1 \\
+		\hline
+		HRAS & TP53,SDHB,SDHS,AKT1 \\
+		\hline
+		AKT1 & TP53,SDHB,SDHD,HRAS \\
+		\hline
+		SDHB & TP53,SDHD,HRAS,AKT1 \\
+		\hline
+		SDHD & SDHB,HRAS,AKT1 \\
+		\hline
+	\end{tabular}
+	\label{tab:genesinteres}
+\end{table}
 
 \subsection{Relación de los genes de interés con fenotipos patológicos.}
 

@@ -76,33 +76,37 @@ Cargamos el archivo TSV descargado.
 Seleccionamos columnas específicas ($'preferredName_A'$ y $'preferredName_B'$) y eliminamos duplicados.
 Guardamos estas columnas en un nuevo archivo de texto llamado $'genes_igraph.txt'$.
 
+\subsection{Propiedades de la red}
+
 Nosotros usamos la biblioteca de \textbf{igraph} disponible en el lenguaje de programación de R para realizar el análisis y la visualización de la red. En primer lugar, importamos la librería y leímos el fichero que obtuvimos al generar la red con la API de STRINGDB y la guardamos en un grafo. A partir de este, estudiamos las \textbf{propiedades del grafo}, si todos los nodos estaban conectados con la función isconnected(), si era o no dirigido con la función is.directed(), el grado de centralidad que nos informaba del número de conexiones de cada gen con la función degree(), la centralidad de cercanía con la que obtuvimos la distancia promedio entre un nodo y todos los demás nodos mediante la aplicación de closeness(), y la conectividad que nos indicaba la fortaleza de la conexión del nodo aplicando $edge\_density()$. 
 
 \vspace{3pt}
+\subsection{Detección de comunidades}
 
 En segundo lugar, llevamos a cabo la \textbf{identificación de comunidades} mediante distintos \textbf{algoritmos de clusterización}: método de Girvan-Newman, algoritmo de optimización voraz, propagación de etiquetas y el algoritmo de Louvain. 
 
 \vspace{3pt}
 \begin{enumerate}
-\item El método de \textbf{Girvan Newman} detecta comunidades basándose en la centralidad de intermediación de los nodos, en otras palabras, va eliminando gradualmente las aristas más importantes para identificar las comunidades de la red \cite{Zahiri2023}.
+\item El método de \textbf{Girvan Newman} (función $cluster_edge_betweenness()$, en el fichero $biologiasistemas_igraph.R$ en el repositorio GitHub del proyecto)detecta comunidades basándose en la centralidad de intermediación de los nodos, en otras palabras, va eliminando gradualmente las aristas más importantes para identificar las comunidades de la red \cite{Zahiri2023}.
 
 
-\item El \textbf{algoritmo voraz}, busca formar grupos de datos de manera iterativa tomando en cada paso la elección más beneficiosa para fusionar o dividir clusters con el objetivo de maximizar un criterio local \cite{Curtis2003}. 
+\item El \textbf{algoritmo voraz} (función $cluster_fast_greedy()$, en el fichero $biologiasistemas_igraph.R$ en el repositorio GitHub del proyecto), busca formar grupos de datos de manera iterativa tomando en cada paso la elección más beneficiosa para fusionar o dividir clusters con el objetivo de maximizar un criterio local \cite{Curtis2003}.  
 
 
-\item La \textbf{propagación de etiquetas} es un enfoque basado en la difusión de información a través de la red que agrupa los nodos que están fuertemente conectados \cite{Garza2019}.
+\item La \textbf{propagación de etiquetas} (función $cluster_label_prop()$, en el fichero $biologiasistemas_igraph.R$ en el repositorio GitHub del proyecto) es un enfoque basado en la difusión de información a través de la red que agrupa los nodos que están fuertemente conectados \cite{Garza2019}.
 
-\item Por último el \textbf{algoritmo de Louvain} busca organizar los nodos de una red en comunidades de manera que la modularidad global de la red sea máxima, o en otras palabras, cómo de bien se dividen los nodos de una red en grupos o comunidades distintas \cite{Zhang2021}.
+\item Por último el \textbf{algoritmo de Louvain} (función $cluster_louvain()$, en el fichero $biologiasistemas_igraph.R$ en el repositorio GitHub del proyecto)  busca organizar los nodos de una red en comunidades de manera que la modularidad global de la red sea máxima, o en otras palabras, cómo de bien se dividen los nodos de una red en grupos o comunidades distintas \cite{Zhang2021}.
 
 \end{enumerate}
 
 \vspace{3pt}
 
-Para estudiar mejor a qué comunidad pertenece cada nodo, visualizamos el resultado de la aplicación del algoritmo de Louvain mediante la aplicación de \textbf{link communities} que nos permitía identificar si alguno de los nodos se incluían en varias comunidades. 
+Para estudiar mejor a qué comunidad pertenece cada nodo, visualizamos el resultado de la aplicación del algoritmo de Louvain mediante la aplicación de \textbf{link communities} (función getLinkCommunities(), en el fichero $biologiasistemas_igraph.R$ en el repositorio GitHub del proyecto) que nos permitía identificar si alguno de los nodos se incluían en varias comunidades. 
 
 \vspace{3pt}
+\subsection{Interacción de genes de interés}
 
-En tercer lugar, estudiamos la interacción de nuestros \textbf{genes de interés} especificados anteriormente: TP53, HRAS, AKT1, SDHB, SDHD. Para ellos creamos una función que nos devolvía una tabla con los vecinos de cada uno de estos genes para saber si entre ellos estaban relacionados.
+En tercer lugar, estudiamos la interacción de nuestros \textbf{genes de interés} especificados anteriormente: \textit{TP53}, \textit{HRAS}, \textit{AKT1}, \textit{SDHB}, \textit{SDHD}. Para ellos creamos una función (función $encontrar_vecinos_interesantes()$, en el fichero $biologiasistemas_igraph.R$ en el repositorio GitHub del proyecto) que nos devolvía una tabla con los vecinos de cada uno de estos genes para saber si entre ellos estaban relacionados.
 
 \vspace{3pt}
 
