@@ -6,7 +6,7 @@
 Se identificaron un total de 51 genes asociados al fenotipo \textbf{Papilloma} y obtuvimos una representación visual de la red de interacción entre los genes.
 \begin{figure}
 	\centering
-	\includegraphics[width=0.8\linewidth]{red_inicial}
+	\includegraphics[width=0.8\linewidth]{figures/cluster_etiq_louvain}
 	\caption{Red formada por los 51 genes relacionados con el fenotipo \textbf{Papilloma}}
 	\label{fig:grado_centralidad}
 \end{figure}
@@ -34,7 +34,7 @@ En nuestra red vimos que todos los nodos estaban conectados entre sí y que se t
 Obtuvimos una tabla con el \textbf{grado de centralidad} de cada gen. Pudimos observar como el gen de interés TP53 es el que presentaba un mayor grado de centralidad y por tanto más relaciones con otros genes. 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.8\linewidth]{grado_centralidad}
+	\includegraphics[width=0.8\linewidth]{figures/grado_centralidad}
 	\caption{Descripción de la figura.}
 	\label{fig:grado_centralidad}
 \end{figure}
@@ -145,13 +145,13 @@ Tras enriquecer el conjunto de genes de interés hemos obtenido 729 entradas en 
 \begin{table}[h]
 	\centering
 	\caption{Fenotipos patológicos con palabra clave carcinoma}
-	\begin{tabular}{|c|c|}
+	\begin{tabular}{|p{3cm}|p{4cm}|}
 		\hline
 		\textbf{Genes} & \textbf{Fenotipos patológicos asociados} \\
 		\hline
-		PIK3CA,SDHC,NRAS,PTEN,SDHB,SDHD,HRAS,AKT1 & Carcinoma folicular de tiroides \\
+		PIK3CA, SDHC, NRAS, PTEN, SDHB, SDHD, HRAS, AKT1 & Carcinoma folicular de tiroides \\
 		\hline
-		PIK3CA,TP53,SDHC,NRAS,PTEN,SDHB,SDHD,HRAS,AKT1 & Carcinoma de tiroides \\
+		PIK3CA, TP53, SDHC, NRAS, PTEN, SDHB, SDHD, HRAS, AKT1 & Carcinoma de tiroides \\
 		\hline
 		PIK3CA,TP53,SDHC,PTEN,SDHB,SDHD,AKT1 & Carcinoma de mama \\
 		\hline
