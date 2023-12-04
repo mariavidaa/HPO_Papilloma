@@ -5,6 +5,10 @@ genes <- read.table("../results/genes_igraph.txt", sep = '\t', header = FALSE, s
 #Creamos un nuevo grafo no dirigido a partir de esta información
 net <- graph_from_data_frame(genes, directed=F)
 
+# Mostramos la red
+par(cex = 0.4)
+plot(net)
+
 # Comprobamos que no hay ningun nodo sin conexión.
 is.connected(net)
 
@@ -28,12 +32,14 @@ community <- cluster_edge_betweenness(net)
 dendPlot(community, mode="hclust")
 # Mostramos el grafo con las clusters detectados
 par(cex = 0.4)
+plot(community, net)
 # Guardamos la imagen en la carpeta results
 dev.copy(png, filename = "../results/clustering_in_betweeness.png", width = 800, height = 600)  
 dev.off()
 
 cfg <- cluster_fast_greedy(as.undirected(net))
 par(cex = 0.4)
+plot(cfg, as.undirected(net))
 # Guardamos la imagen en la carpeta results
 dev.copy(png, filename = "../results/clustering_fast_greedy.png", width = 800, height = 600)  
 dev.off()
@@ -42,6 +48,7 @@ dev.off()
 V(net)$community <- cfg$membership
 colrs <- adjustcolor( c("gray50", "tomato", "gold", "yellowgreen", "blue"), alpha=.6)
 par(cex = 0.4)
+plot(net, vertex.color=colrs[V(net)$community])
 # Guardamos la imagen en la carpeta results
 dev.copy(png, filename = "../results/clustering_coloreado.png", width = 800, height = 600)  
 dev.off()
@@ -49,12 +56,14 @@ dev.off()
 # Detección de comunidades mediante propagación de etiquetas.
 clp <- cluster_label_prop(net)
 par(cex = 0.4)
+plot(clp, net)
 # Guardamos la imagen en la carpeta results
 dev.copy(png, filename = "../results/clustering_label_prop.png", width = 800, height = 600)  
 dev.off()
 
 community_louvain <- cluster_louvain(net)
 par(cex = 0.4)
+plot(community_louvain, net)
 # Guardamos la imagen en la carpeta results
 dev.copy(png, filename = "../results/clustering_louvain.png", width = 800, height = 600)  
 dev.off()
