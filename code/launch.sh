@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir -p "../results"
+
 echo "Instalamos dependencias"
 # Script para instalar dependencias
 ./setup.sh
