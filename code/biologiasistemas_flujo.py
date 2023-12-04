@@ -5,10 +5,6 @@
 ## Obtencion de los genes
 
 
-!pip install requests
-!pip install pandas
-!pip install stringdb
-
 import stringdb
 import pandas as pd
 import requests
