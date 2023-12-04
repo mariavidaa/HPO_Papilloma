@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{19}
+\begin{thebibliography}{18}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -358,15 +358,6 @@ doi:\doiurl{10.1155/2021/1485592}
 \end{botherref}
 \endbibitem
 
-%%% 19
-\bibitem{hpojax}
-\begin{botherref}
-Human Phenotype Ontology (HPO) Browser.
-\url{https://hpo.jax.org/app/}.
-Accessed: Insert your access date here
-\end{botherref}
-\endbibitem
-
 \end{thebibliography}
 
 \newcommand{\BMCxmlcomment}[1]{}
@@ -674,12 +665,6 @@ Accessed: Insert your access date here
   <source>Mathematical Problems in Engineering</source>
   <pubdate>2021</pubdate>
   <volume>2021</volume>
-</bibl>
-
-<bibl id="B19">
-  <title><p>Human Phenotype Ontology (HPO) Browser</p></title>
-  <source>\url{https://hpo.jax.org/app/}</source>
-  <note>Accessed: Insert your access date here</note>
 </bibl>
 
 </refgrp>
