@@ -1,6 +1,54 @@
 \section{Materiales y métodos}
 
 \subsection{Materiales}
+A continuación, explicaremos los recursos y herramientas utilizados para los experimentos:
+
+\vspace{3pt}
+
+\textbf{Human Phenotype Ontology}\\ HPO es un vocabulario estandarizado de anomalías fenotípicas en enfermedades humanas que utiliza un fenotipado detallado para poder ser usado a nivel computacional \cite{HPO}.
+
+\vspace{3pt}
+
+\textbf{R}\\ R, en su esencia, es un lenguaje destinado a la exploración estadística y la creación de representaciones gráficas. Se configura como un entorno de programación compuesto por un conjunto de herramientas altamente adaptables, cuya funcionalidad puede ser expandida con facilidad a través de la integración de paquetes, bibliotecas o mediante la creación de funciones personalizadas. Además, se destaca por ser una plataforma de código abierto y gratuita, enmarcada en el proyecto GNU, compartiendo este enfoque con sistemas como Linux o aplicaciones como Mozilla Firefox. En nuestro caso hemos trabajado con la versión 4.3.1 de R \cite{Giorgi2022}.
+
+\vspace{3pt}
+
+\textbf{Python}\\
+Python es un lenguaje de programación versátil de alto nivel ampliamente empleado en el desarrollo de diversas aplicaciones. A diferencia de lenguajes como Java o .NET, Python es interpretado, lo que significa que no requiere un proceso de compilación antes de ejecutar las aplicaciones. En lugar de eso, las aplicaciones escritas en Python se ejecutan directamente en la computadora utilizando un intérprete, eliminando la necesidad de traducción a lenguaje de máquina previamente. Este enfoque agiliza el desarrollo y ejecución de programas en Python. La versión utilizada de Python fue la 3.12.0 \cite{Mehare2023}.
+
+\vspace{3pt}
+
+\textbf{String}\\
+String es una base de datos que alberga información sobre interacciones entre proteínas, tanto aquellas conocidas como las predichas. Estas interacciones abarcan desde asociaciones directas (físicas) hasta indirectas (funcionales). La base de datos recopila datos de diversas fuentes, que incluyen repositorios experimentales, métodos de predicción computacional y colecciones de textos públicos. Cada interacción está evaluada con una puntuación de condensación combinada que sintetiza las diversas evidencias disponibles\cite{Szklarczyk2021}.
+
+\vspace{3pt}
+
+\textbf{iGraph}\\
+iGraph es una biblioteca rápida y de código abierto para el análisis de grafos o redes. El núcleo de esta librería está implementado en C y dispone de enlaces para su uso con lenguajes de alto nivel como R, Python y Mathematica \cite{Csardi2006}.
+
+\vspace{3pt}
+
+\textbf{Pandas}\\
+Pandas es una biblioteca de programación en Python diseñada para facilitar el análisis y la manipulación de datos. Se centra en estructuras de datos como el "DataFrame", una tabla bidimensional, y ofrece funciones para cargar, limpiar y transformar datos de manera eficiente. Es ampliamente utilizado en ciencia de datos y análisis estadístico \cite{Snehkunj2022}.
+
+\vspace{3pt}
+
+\textbf{Algoritmos de clusterización}\\
+Los algoritmos de clusterización son técnicas utilizadas en análisis de datos para dividir un conjunto de datos en grupos o "clústeres" basándose en similitudes entre los elementos. El objetivo es agrupar datos que sean más similares entre sí y más diferentes de otros grupos. Estos algoritmos ayudan a descubrir patrones y estructuras intrínsecas en los datos sin necesidad de etiquetas preexistentes. Los que se utilizaron para el trabajo fueron los siguientes:
+
+•\textbf{Algoritmo de Givan-Newman}: es un método utilizado para detectar comunidades en redes complejas. Este algoritmo se basa en la idea de eliminar gradualmente los enlaces más importantes de una red para revelar su estructura de comunidad.
+
+•\textbf{Algoritmo de optimización voraz}: también conocido como algoritmo ávido o greedy, es un enfoque de resolución de problemas que toma decisiones locales en cada etapa con la esperanza de encontrar una solución óptima global. En cada paso, el algoritmo selecciona la mejor opción disponible en ese momento, sin considerar las posibles consecuencias a largo plazo.
+
+•\textbf{Algoritmo de propagación de etiquetas}: también conocido como "propagación de la afinidad," es un método de agrupamiento basado en la similitud entre los datos. A diferencia de otros algoritmos de agrupamiento que requieren la especificación del número de clústeres, la propagación de etiquetas es un algoritmo de agrupamiento sin la necesidad de definir previamente el número de clústeres.
+
+•\textbf{Algoritmo de Louvain}: es un algoritmo de optimización utilizado para la detección de comunidades en redes o grafos. Su objetivo es encontrar una partición modular del grafo que maximice la modularidad. La modularidad es una medida que cuantifica la calidad de la partición de un grafo en comunidades, considerando la densidad de conexiones dentro de las comunidades y la rareza de conexiones entre ellas.
+
+\vspace{3pt}
+
+\textbf{Linkcomm}\\
+Las comunidades de enlaces revelan la estructura anidada y superpuesta en las redes y descubren los nodos clave que forman conexiones con varias comunidades. Linkcomm proporciona un conjunto de herramientas para generar, visualizar y analizar comunidades de enlaces en redes de tamaño y tipo arbitrarios. El paquete linkcomm también incluye herramientas para generar, visualizar y analizar comunidades de Generadores de Clúster Superpuestos (OCG) \cite{Kalinka2011}.
+
 
 \subsection{Métodos}
 En primer lugar creamos una función que busca genes asociados a un fenotipo específico utilizando la API de \textbf{HPO}.
