@@ -1,15 +1,21 @@
 #!/bin/bash
 
-# Crear las carpetas donde estarán las dependencias de python y de R
-mkdir -p ../software
-mkdir -p ../software/python
-mkdir -p ../software/R
+# Definir las carpetas donde estarán las dependencias de python y de R
+PYTHON_FOLDER="../software/python"
+R_FOLDER="../software/R"
+
+# Crear las carpetas si no existen
+mkdir -p "$PYTHON_FOLDER"
+mkdir -p "$R_FOLDER"
 
 # Limpieza de cache
 python3 -m pip cache purge
 
-# Instalar dependencias de Python del archivo pythonreqs
-python3 -m pip install -r ../results/pythonreqs.txt --target=../software/python 1> /dev/null
+# Instalar dependencias de Python del archivo pythonreqs.txt en la carpeta python
+python3 -m pip install -r pythonreqs.txt --target="$PYTHON_FOLDER"
 
-# Instalar dependencias de R del archivo Rreqs
-Rscript -e 'install.packages(readLines("../results/Rreqs.txt"), repos="http://cran.us.r-project.org", dependencies=TRUE, lib="../software/R")' 1> /dev/null
+# Instalar dependencias de R del archivo Rreqs.txt en la carpeta R
+Rscript -e 'install.packages(readLines("Rreqs.txt"), lib="../software/R")'
+
+# Imprimir mensaje de finalización
+echo "Instalación de dependencias completada con éxito."
