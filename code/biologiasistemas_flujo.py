@@ -9,7 +9,7 @@ import stringdb
 import pandas as pd
 import requests
 import shutil
-from IPython.display import Image
+
 
 def buscar_genes_por_fenotipo(fenotipo):
     # URL base de la API de HPO para buscar genes asociados a un fenotipo
