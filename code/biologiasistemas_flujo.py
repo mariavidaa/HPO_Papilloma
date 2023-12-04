@@ -46,7 +46,7 @@ url_request = f"{base_url}network?identifiers={symbols}&species={species}&networ
 print("Requesting to "+url_request)
 
 response = requests.get(url_request, stream=True)
-with open('img.png', 'wb') as out_file:
+with open('../results/red_inicial.png', 'wb') as out_file:
     shutil.copyfileobj(response.raw, out_file)
 del response
 
@@ -63,7 +63,7 @@ categorias = ['Process', 'KEGG']
 enrichment_df_filtrado = enrichment_df[enrichment_df['category'].isin(categorias)]
 
 # Imprimimos los resultados filtrados
-print(enrichment_df_filtrado)
+enrichment_df_filtrado.to_csv('../results/enriquecimiento_categorias', index = False)
 
 # Busqueda por palabras clave
 palabras_buscadas = ['cervix', 'ovarian', 'HPV', 'herpes', 'papillomavirus', 'costellos', 'cowden']
@@ -72,7 +72,7 @@ patron = '|'.join(palabras_buscadas)
 
 resultados_enfermedades = enrichment_df[enrichment_df['description'].str.contains(patron, case=False)]
 
-resultados_enfermedades.to_csv('fueij', index = True)
+resultados_enfermedades.to_csv('../results/enriquecimiento_enfermedades', index = False)
 
 # Busqueda por genes relevantes
 palabras_buscadas = ['TP53', 'AKT1', 'SDHB', 'SDHD', 'HRAS']
@@ -81,7 +81,7 @@ patron = '|'.join(palabras_buscadas)
 
 resultados_genes = enrichment_df_filtrado[enrichment_df_filtrado['inputGenes'].str.contains(patron, case=False)]
 
-resultados_genes
+resultados_genes.to_csv('../results/enriquecimiento_genes', index = False)
 
 # Descarga de la red en formato tsv
 base_url = 'https://string-db.org/api/tsv/'
@@ -105,7 +105,7 @@ if response.ok:
         print(f"Archivo {filename} descargado exitosamente.")
     else:
         print("No se pudo obtener el nombre del archivo. Guardando como 'red_descargada.tsv'.")
-        with open('red_descargada.tsv', 'wb') as file:
+        with open('../results/red_descargada.tsv', 'wb') as file:
             file.write(response.content)
 else:
     print("Error al descargar el archivo. Código de estado:", response.status_code)
@@ -113,7 +113,7 @@ else:
 
 # Limpieza del archivo tsv
 # Ruta del archivo TSV descargado desde la API de StringDB
-file_path = 'red_descargada.tsv'  # Reemplaza con la ruta de tu archivo descargado
+file_path = '../results/red_descargada.tsv'  
 
 # Cargar el archivo TSV
 data = pd.read_csv(file_path, sep='\t')
@@ -125,6 +125,6 @@ selected_columns = data[['preferredName_A', 'preferredName_B']]
 selected_columns.drop_duplicates(inplace=True)
 
 # Guardar estas columnas en un nuevo archivo de texto
-selected_columns.to_csv('genes_igraph.txt', sep='\t', index=False, header=False)
+selected_columns.to_csv('../results/genes_igraph.txt', sep='\t', index=False, header=False)
 
 print("Se han guardado las columnas 'preferredName_A' y 'preferredName_B' en genes_igraph.txt")
