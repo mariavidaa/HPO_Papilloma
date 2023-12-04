@@ -3,6 +3,30 @@
 \subsection{Materiales}
 
 \subsection{Métodos}
+En primer lugar creamos una función que busca genes asociados a un fenotipo específico utilizando la API de \textbf{HPO}.
+La función recibe el parámetro fenotipo, que es el código HPO para el fenotipo de interés.
+Realizamos una solicitud GET a la API de HPO para obtener información sobre genes asociados al fenotipo.
+Si la solicitud es exitosa (código de estado 200), extraemos y devolvemos los genes asociados al fenotipo. Si no, imprimimos un mensaje de error y devolvemos una lista vacía.
+
+
+Utilizamos la función $buscar\_genes\_por\_fenotipo$ para obtener los genes asociados al fenotipo "Papilloma" (código HPO: HP:0012740).
+Si encontramos genes asociados, imprimimos los nombres de los genes. Si no encontramos genes asociados, mostramos un mensaje indicando que no se encontraron genes.
+
+Tras esto construimos una URL con los símbolos de los genes obtenidos anteriormente para realizar una solicitud a la API de StringDB, que proporciona información sobre interacciones de proteínas.
+Realizamos una solicitud GET a la API de StringDB para obtener una red de interacciones de proteínas.
+Guardamos la respuesta como una imagen llamada 'img.png'.
+
+Imprimimos y filtramos los resultados del análisis de enriquecimiento por categorías ('Process' y 'KEGG').
+Realizamos búsquedas específicas en los resultados de enfermedades y genes utilizando palabras clave y patrones de genes relevantes, respectivamente.
+Guardamos los resultados de las búsquedas en archivos CSV .
+
+Realizamos una solicitud GET a la API de StringDB para descargar la red de interacciones en formato TSV.
+Si la descarga es exitosa, guardamos el archivo con el nombre proporcionado por la respuesta o como $'red_descargada.tsv'$ si no se obtiene un nombre de archivo.
+Si hay un error en la descarga, imprimimos un mensaje de error.
+
+Cargamos el archivo TSV descargado.
+Seleccionamos columnas específicas ($'preferredName_A'$ y $'preferredName_B'$) y eliminamos duplicados.
+Guardamos estas columnas en un nuevo archivo de texto llamado $'genes_igraph.txt'$.
 
 Nosotros usamos la biblioteca de \textbf{igraph} disponible en el lenguaje de programación de R para realizar el análisis y la visualización de la red. En primer lugar, importamos la librería y leímos el fichero que obtuvimos al generar la red con la API de STRINGDB y la guardamos en un grafo. A partir de este, estudiamos las \textbf{propiedades del grafo}, si todos los nodos estaban conectados con la función isconnected(), si era o no dirigido con la función is.directed(), el grado de centralidad que nos informaba del número de conexiones de cada gen con la función degree(), la centralidad de cercanía con la que obtuvimos la distancia promedio entre un nodo y todos los demás nodos mediante la aplicación de closeness(), y la conectividad que nos indicaba la fortaleza de la conexión del nodo aplicando $edge\_density()$. 
 
