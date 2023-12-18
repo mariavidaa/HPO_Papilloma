@@ -57,16 +57,16 @@ dev.off()
 # Detección de comunidades mediante propagación de etiquetas.
 clp <- cluster_label_prop(net)
 par(cex = 0.4)
+png(filename = "../results/clustering_label_prop.png", width = 800, height = 600)
 plot(clp, net)
 # Guardamos la imagen en la carpeta results
-dev.copy(png, filename = "../results/clustering_label_prop.png", width = 800, height = 600)  
 dev.off()
 
 community_louvain <- cluster_louvain(net)
 par(cex = 0.4)
+png(filename = "../results/clustering_louvain.png", width = 800, height = 600)
 plot(community_louvain, net)
 # Guardamos la imagen en la carpeta results
-dev.copy(png, filename = "../results/clustering_louvain.png", width = 800, height = 600)  
 dev.off()
 
 library(linkcomm)
@@ -77,9 +77,9 @@ lc <- getLinkCommunities(genes)
 # Visualiza las link communities
 options(repr.plot.width=9, repr.plot.height=9)
 par(cex = 0.5)# Visualiza las link communities
+png(filename = "../results/clustering_link_communities.png", width = 800, height = 600)
 plot(lc, type = "graph", layout = "spencer.circle")
 # Guardamos la imagen en la carpeta results
-dev.copy(png, filename = "../results/clustering_link_communities.png", width = 800, height = 600)  
 dev.off()
 
 # Genes de interés
