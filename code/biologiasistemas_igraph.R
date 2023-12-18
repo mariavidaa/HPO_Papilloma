@@ -32,25 +32,26 @@ community <- cluster_edge_betweenness(net)
 dendPlot(community, mode="hclust")
 # Mostramos el grafo con las clusters detectados
 par(cex = 0.4)
+png(filename = "../results/clustering_in_betweeness.png", width = 800, height = 600)
 plot(community, net)
 # Guardamos la imagen en la carpeta results
-dev.copy(png, filename = "../results/clustering_in_betweeness.png", width = 800, height = 600)  
 dev.off()
 
 cfg <- cluster_fast_greedy(as.undirected(net))
 par(cex = 0.4)
+png(filename = "../results/clustering_fast_greedy.png", width = 800, height = 600)
 plot(cfg, as.undirected(net))
 # Guardamos la imagen en la carpeta results
-dev.copy(png, filename = "../results/clustering_fast_greedy.png", width = 800, height = 600)  
+#dev.copy(png, filename = "../results/clustering_fast_greedy.png", width = 800, height = 600)  
 dev.off()
 
 # Pinta el grafo de manera que los nodos que lo forman compartan un mismo color si pertenecen a la misma comunidad.
 V(net)$community <- cfg$membership
 colrs <- adjustcolor( c("gray50", "tomato", "gold", "yellowgreen", "blue"), alpha=.6)
 par(cex = 0.4)
+png(filename = "../results/clustering_coloreado.png", width = 800, height = 600)
 plot(net, vertex.color=colrs[V(net)$community])
 # Guardamos la imagen en la carpeta results
-dev.copy(png, filename = "../results/clustering_coloreado.png", width = 800, height = 600)  
 dev.off()
 
 # Detección de comunidades mediante propagación de etiquetas.
