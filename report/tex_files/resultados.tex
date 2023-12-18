@@ -3,7 +3,14 @@
 
 \subsection{Red de interacción entre genes}
 
-Se identificaron un total de 51 genes asociados al fenotipo \textbf{Papilloma} y obtuvimos una representación visual de la red de interacción entre los genes.
+Se identificaron un total de 51 genes asociados al fenotipo \textbf{Papilloma} y obtuvimos una representación visual de la red de interacción entre los genes (Fig. \ref{fig:red_inicial}). La red cuenta con todos los nodos con grado mayor o igual que 1 menos 6 nodos que se encuentran aislados. Más detalles sobre la red serán explicados a partir de la sección \ref{sec:propiedades}.
+
+\begin{figure}[b]
+	\centering
+	\includegraphics[width=0.98\linewidth]{figures/red_inicial}
+	\caption{Resultado de la generación de la red conformada por los genes asociados al fenotipo \textbf{Papilloma}}
+	\label{fig:red_inicial}
+\end{figure} 
 
 
 \subsection{Análisis de enriquecimiento funcional}
@@ -14,13 +21,9 @@ Los términos y categorías relacionados con enfermedades como \textbf{cervix}, 
 
 Se realizaron búsquedas específicas de genes clave como \textit{TP53}, \textit{AKT1}, \textit{SDHB}, \textit{SDHD}, \textit{HRAS} dentro de las categorías significativas. Estos genes podrían tener una importancia particular en relación con el fenotipo de interés, evidenciando su posible relevancia funcional.
 
-\subsection{Descarga y procesamiento de la red de interacción}
-
-Se descargó la red de interacción en formato TSV. El archivo descargado se procesó para dar como resultado un archivo de texto \textbf{$genes_igraph.txt$} formado por dos columnas de nombres de genes, en las que cada fila representa una relación entre dos genes.
 
 
-
-\subsection{Propiedades de la red y detección de comunidades}
+\subsection{Propiedades de la red y detección de comunidades} \label{sec:propiedades}
 
 En nuestra red vimos que todos los nodos estaban conectados entre sí y que se trataba de un grafo no dirigido.
 
